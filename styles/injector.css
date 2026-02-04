@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Retro';
+  background: #7c7c7c;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  font-family: 'Retro';
+  color: white;
+  border-radius: 0.7rem;
+  background-image: url("../img/Background/member_holder.png");
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  max-width: 600px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  border-width: 6px 6px 6px 6px;
+  border-style: solid;
+  border-image-source: url("../img/Background/member_holder.png");
+  border-image-slice: 6 6 6 6 fill;
+  border-image-repeat: round;
+}
+
+.container-mod {
+  background: rgb(158, 158, 158);
+  border-radius: 5px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #666;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-info {
+  display: none;
+}
+
+.file-info.show {
+  display: flex;
+}
+
+.file-name {
+  color: white;
+  font-weight: 600;
+  word-break: break-all;
+  flex: 1;
+}
+
+.cancel-file-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  margin-left: 10px;
+}
+
+.cancel-file-btn:hover {
+  background: #c82333;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+}
+
+.card {
+  flex-direction: row;
+  max-width: 600px;
+  width: 100%;
+  height: 150px;
+  max-height: 150px;
+  border: 0;
+  background-color: #696969;
+  color: #fff;
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
+  border-width: 4px 4px 4px 4px;
+  border-style: solid;
+  border-image-source: url("../img/Background/mod_header.png");
+  border-image-slice: 4 4 4 4 fill;
+  border-image-repeat: round;
+}
+.card img {
+  max-width: 25%;
+  margin: auto;
+  padding: 0.5em;
+  border-radius: 0.7em;
+}
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.text-section {
+  max-width: 60%;
+}
+.cta-section {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.cta-section .btn {
+  padding: 0.2em 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.queue-counter {
+  background: #667eea;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom mod upload area */
+.upload-area {
+  border: 2px dashed #888;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  background: #5a5a5a;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-area:hover {
+  border-color: #aaa;
+  background: #636363;
+}
+
+.upload-area.drag-over {
+  border-color: #5997d0;
+  background: #4a6a8a;
+}
+
+.upload-area-icon {
+  font-size: 2.5rem;
+  color: #aaa;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.upload-area-text {
+  color: #c9c9c9;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.upload-area-hint {
+  color: #a2a2a2;
+  font-size: 15px;
+  font-size: 0.8rem;
+}

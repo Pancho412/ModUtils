@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mod Merger</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/injector.css">
+    <link rel="stylesheet" href="styles/merger.css">
+</head>
+<body class="background">
+    <nav class="nav-tools">
+        <a href="injector.html" class="nav-link">Mod Injector</a>
+        <a class="nav-link active">Mod Merger</a>
+    </nav>
+
+    <div class="container" style=" max-width: 800px; width: 100%;">
+        <h1>Mod Merger</h1>
+        <p class="subtitle">Combine 2 mods into 1 single mod</p>
+
+        <div class="mods-upload-grid">
+            <!-- First Mod -->
+            <div class="mod-slot" id="modSlot1">
+                <div class="mod-slot-header">Primary Mod (Base)</div>
+                <div class="upload-area" id="modUpload1">
+                    <div class="upload-area-icon">1</div>
+                    <div class="upload-area-text">Drop first mod (.zip/.mod)</div>
+                    <div class="upload-area-hint">This mod's folder name and info will be used</div>
+                    <input type="file" id="modInput1" accept=".zip,.mod" style="display: none;">
+                </div>
+                <div class="card dark card_mod" id="modPreview1" style="display: none;">
+                    <img class="card-img-top" id="modIcon1" src="" alt="Mod icon">
+                    <div class="card-body">
+                        <div class="text-section">
+                            <h5 class="card-title fw-bold" id="modName1"></h5>
+                            <p class="card-text" id="modAuthor1"></p>
+                            <p class="card-text" id="modFiles1"></p>
+                        </div>
+                    </div>
+                    <button class="mod-remove-btn" id="modRemove1">X</button>
+                </div>
+            </div>
+
+            <!-- Plus icon -->
+            <div class="merge-indicator">+</div>
+
+            <!-- Second Mod -->
+            <div class="mod-slot" id="modSlot2">
+                <div class="mod-slot-header">Secondary Mod</div>
+                <div class="upload-area" id="modUpload2">
+                    <div class="upload-area-icon">2</div>
+                    <div class="upload-area-text">Drop second mod (.zip/.mod)</div>
+                    <div class="upload-area-hint">Files will be merged into the first mod</div>
+                    <input type="file" id="modInput2" accept=".zip,.mod" style="display: none;">
+                </div>
+                <div class="card dark card_mod" id="modPreview2" style="display: none;">
+                    <img class="card-img-top" id="modIcon2" src="" alt="Mod icon">
+                    <div class="card-body">
+                        <div class="text-section">
+                            <h5 class="card-title fw-bold" id="modName2"></h5>
+                            <p class="card-text" id="modAuthor2"></p>
+                            <p class="card-text" id="modFiles2"></p>
+                        </div>
+                    </div>
+                    <button class="mod-remove-btn" id="modRemove2">X</button>
+                </div>
+            </div>
+        </div>
+
+        <button id="mergeBtn" class="custom-button" disabled>
+            <span id="mergeBtnText">Upload both mods to merge</span>
+        </button>
+
+        <div class="log" id="log"></div>
+        <button class="custom-button" id="log_button" style="display: none;" onclick="exportLogToPDF()">
+            Export log to PDF
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="src/auxiliary.js"></script>
+    <script src="src/merger.js"></script>
+</body>
+</html>

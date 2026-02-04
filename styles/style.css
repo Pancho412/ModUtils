@@ -1,0 +1,224 @@
+@font-face {
+  font-family: 'Retro';
+  src: url('../fonts/pokemon-ds-font.ttf') format('truetype');
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #5a5a5a, #4a4a4a);
+    border-radius: 6px;
+    border: 2px solid #2a2a2a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #6a6a6a, #5a5a5a);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(180deg, #7a7a7a, #6a6a6a);
+}
+
+::-webkit-scrollbar-corner {
+    background: #2a2a2a;
+}
+
+.background {
+  background-image: url("../img/Background/showcasebackground.gif");
+  background-color: #515151;
+}
+
+.nav-tools {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 20px;
+  z-index: 100;
+  height: 90px;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  border-width: 15px 1px 15px 1px;
+  border-style: solid;
+  border-image-source: url("../img/NavBar_Background.png");
+  border-image-slice: 15 1 15 1 fill;
+  border-image-repeat: round;
+}
+
+.nav-tools a {
+  font-family: "Retro";
+  color: #fff;
+  text-decoration: none;
+  transition: transform .3s ease;
+  font-size: 24px;
+}
+
+.nav-tools a:hover {
+  text-decoration: underline;
+  transform: translateY(-5px);
+  color: white;
+}
+
+.nav-link.active {
+  color: #ffffff5b;
+}
+.active:hover {
+  color: #696969 !important;
+  text-decoration: none !important;
+  transform: none !important;
+}
+
+.upload-area {
+  border: 2px dashed #888;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  background: #5a5a5a;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  background: #f8f9ff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.upload-area:hover {
+  border-color: #5997d0;
+}
+
+.upload-area.drag-over {
+  transform: scale(1.02);
+}
+
+.upload-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.upload-text {
+  color: #063d96;
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.upload-hint {
+  color: #a2a2a2;
+  font-size: 20px;
+}
+
+.log {
+  background: #f8f9ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  max-height: 100px;
+  overflow-y: auto;
+  display: none;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  border-width: 4px 4px 4px 4px;
+  border-style: solid;
+  border-image-source: url("../img/Background/mod_header.png");
+  border-image-slice: 4 4 4 4 fill;
+  border-image-repeat: round;
+}
+
+.log.show {
+  display: block;
+}
+
+.log-item {
+  padding: 5px 0;
+  color: #333;
+}
+
+.log-item.success {
+  color: #28a745;
+}
+
+.log-item.error {
+  color: #dc3545;
+}
+
+.log-item.info {
+  color: #667eea;
+}
+
+.log-item.warning {
+  color: #daa915;
+}
+
+button {
+  background: transparent;
+  background-color: transparent;
+}
+
+.custom-button {
+  font-family: "Retro";
+  font-size: 27px;
+  margin-top: 0.5rem;
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.815);
+  border-width: 0px 10px 0px 10px;
+  border-style: solid;
+  border-image-source: url("../img/button/button-showcase.png");
+  border-image-slice: 0 10 0 10 fill;
+  transition: border-image-source 0.2s ease;
+}
+
+.custom-button:hover {
+  border-image-source: url("../img/button/button-showcase-hover.png");
+
+}
+
+.custom-button:disabled {
+  opacity: 0.6;
+  border-image-source: url("../img/button/button-showcase-disabled.png");
+  cursor: not-allowed;
+}
+
+.custom-button-smol {
+  font-family: "Retro";
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  border-width: 0px 10px 0px 10px;
+  border-style: solid;
+  border-image-source: url("../img/button/button-showcase.png");
+  border-image-slice: 0 10 0 10 fill;
+  transition: border-image-source 0.2s ease;
+}
+
+.custom-button-smol:hover {
+  border-image-source: url("../img/button/button-showcase-hover.png");
+
+}
+
+.custom-button-smol:disabled {
+  opacity: 0.6;
+  border-image-source: url("../img/button/button-showcase-disabled.png");
+  cursor: not-allowed;
+}
+
+.custom-button-smol.queued {
+  border-image-source: url("../img/button/button-showcase-quequed.png");
+}
+
+.custom-button-smol:hover.queued {
+  border-image-source: url("../img/button/button-showcase-quequed-hover.png");
+}

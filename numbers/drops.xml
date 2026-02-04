@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+	<images file="res/water-levels-number.png" filter="nearest">
+		<area name="number1" xywh="1,1,46,46" center="true"/>
+		<area name="number2" xywh="53,1,46,46" center="true"/>
+		<area name="number3" xywh="1,50,46,46" center="true"/>
+		<area name="number4" xywh="53,50,46,46" center="true"/>
+		<area name="number5" xywh="1,99,46,46" center="true"/>
+		<area name="DryIcon" xywh="53,99,46,46" center="true"/>
+		<area name="FloodIcon" xywh="1,148,46,46" center="true"/>
+
+		<composed name="water-level.dry-a">
+			<alias ref="DryIcon" tint="#FFFFFF" inset="20,-5,-20,5"/>
+		</composed>
+
+		<animation name="water-level.dry" timeSource="enabled">
+			<frame duration="400" ref="water-level.dry-a" tint="#FFFFFFFF"/>
+			<frame duration="400" ref="water-level.dry-a" tint="#b40000"/>
+		</animation>
+
+		<composed name="water-level.1">
+			<alias ref="number1" tint="#FFFFFF" inset="20,-5,-20,5"/>
+		</composed>
+		<composed name="water-level.2">
+			<alias ref="number2" tint="#FFFFFF" inset="20,-5,-20,5"/>
+		</composed>
+		<composed name="water-level.3">
+			<alias ref="number3" tint="#FFFFFF" inset="20,-5,-20,5"/>
+		</composed>
+		<composed name="water-level.4">
+			<alias ref="number4" tint="#FFFFFF" inset="20,-5,-20,5"/>
+		</composed>
+		<composed name="water-level.5">
+			<alias ref="number5" tint="#FFFFFF" inset="20,-5,-20,5"/>
+		</composed>
+
+		<composed name="water-level.blue-a">
+			<alias ref="FloodIcon" tint="#FFFFFF" inset="20,-5,-20,5"/>
+		</composed>
+
+		<animation name="water-level.blue" timeSource="enabled">
+			<frame duration="400" ref="water-level.blue-a" tint="#FFFFFFFF"/>
+			<frame duration="400" ref="water-level.blue-a" tint="#004ac4"/>
+		</animation>
+
+  </images>
+  <theme name="nameplategui" ref="-defaults">
+		<theme name="nameplate-staff" ref="-defaults" allowWildcard="true">
+			<param name="background"><image>label2.background</image></param>
+			<param name="font"><font>alphabeta-border</font></param>
+			<param name="maxHeight"><int>16</int></param>
+			<param name="border"><border>0,0,2,3</border></param>
+		</theme>
+
+		<theme name="nameplate" ref="-defaults" allowWildcard="true">
+			<theme name="widget" ref="-defaults"/>
+			<theme name="moisture-level0" ref="-defaults">
+				<param name="background"><image>water-level.dry</image></param>
+				<param name="minWidth"><int>50</int></param>
+				<param name="minHeight"><int>15</int></param>
+			</theme>
+			<theme name="moisture-level1" ref="-defaults">
+				<param name="background"><image>water-level.1</image></param>
+				<param name="minWidth"><int>50</int></param>
+				<param name="minHeight"><int>15</int></param>
+			</theme>
+			<theme name="moisture-level2" ref="-defaults">
+				<param name="background"><image>water-level.2</image></param>
+				<param name="minWidth"><int>50</int></param>
+				<param name="minHeight"><int>15</int></param>
+			</theme>
+			<theme name="moisture-level3" ref="-defaults">
+				<param name="background"><image>water-level.3</image></param>
+				<param name="minWidth"><int>50</int></param>
+				<param name="minHeight"><int>15</int></param>
+			</theme>
+			<theme name="moisture-level4" ref="-defaults">
+				<param name="background"><image>water-level.4</image></param>
+				<param name="minWidth"><int>50</int></param>
+				<param name="minHeight"><int>15</int></param>
+			</theme>
+			<theme name="moisture-level5" ref="-defaults">
+				<param name="background"><image>water-level.5</image></param>
+				<param name="minWidth"><int>50</int></param>
+				<param name="minHeight"><int>15</int></param>
+			</theme>
+			<theme name="moisture-level6" ref="-defaults">
+				<param name="background"><image>water-level.blue</image></param>
+				<param name="minWidth"><int>50</int></param>
+				<param name="minHeight"><int>15</int></param>
+			</theme>
+			<theme name="misc-nameplate-nobg" ref="-defaults">
+				<param name="background"><image>none</image></param>
+			</theme>
+          	<param name="font"><font>alphabeta-border</font></param>
+        </theme>
+	</theme>
+</themes>

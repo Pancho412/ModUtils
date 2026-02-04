@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mod Injector</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/injector.css">
+    <link rel="stylesheet" href="styles/merger.css">
+</head>
+<body class="background">
+    <nav class="nav-tools">
+        <a class="nav-link active">Mod Injector</a>
+        <a href="merger.html" class="nav-link">Mod Merger</a>
+    </nav>
+
+    <div style="column-gap: 20px; display: flex; margin-top: 60px;">  
+        <!-- Right panel: Upload and process (secondary actions) -->
+        <div class="container" style="width: 50vw; height: 570px; max-height: 570px; display: flex; flex-direction: column;">
+            <h1>1. Upload theme to inject</h1>
+            
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📦</div>
+                <div class="upload-text">Drag .zip or .mod theme</div>
+                <div class="upload-hint">or click to select from your device</div>
+            </div>
+
+            <input type="file" id="fileInput" accept=".zip,.mod">
+            
+            <div class="card dark card_mod file-info" id="fileInfo">
+                <img src="mods/fancy/icon.png" class="card-img-top" alt="icon" id="fileIcon">
+                <div class="card-body">
+                    <div class="text-section">
+                        <h5 class="card-title fw-bold" id="fileName"></h5>
+                        <p class="card-text" id="fileDesc"></p>
+                    </div>
+                    <div class="cta-section">
+                        <button class="cancel-file-btn" id="cancelFileBtn" title="Remove file">X</button>
+                    </div>
+                </div>
+            </div>
+
+            <button id="processBtn" class="custom-button" style="background-color: transparent;" disabled>
+                <span id="btnText">No theme detected</span>
+            </button>
+
+            <!-- Log section at bottom for status updates -->
+            <div class="log" id="log" style="flex: 1; margin-top: 10px;"></div>
+            <button class="custom-button" id="log_button" style="display: none;" onclick="exportLogToPDF()">
+                Export log to PDF
+            </button>
+        </div>
+
+        <div class="container" style="width: 50vw; height: 570px; max-height: 570px;">
+            <h1>2. Select mods to inject</h1>
+            <div style="overflow-y: auto; max-height: 470px; gap: 10px; display: grid;" class="sco">
+                <!-- Added upload area for custom mods -->
+                <div class="upload-area" id="customModUploadCard">
+                    <div class="upload-area-icon">+</div>
+                    <div class="upload-area-text">Upload Custom Mod</div>
+                    <div class="upload-area-hint">Click or drag .zip/.mod file</div>
+                    <input type="file" id="customModInput" accept=".zip,.mod" style="display: none;">
+                </div>
+                
+                <div class="card dark card_mod">
+                    <img src="fancy/icon.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="text-section">
+                            <h5 class="card-title fw-bold">Better water levels (fancy)</h5>
+                            <p class="card-text">Better Drops for Default theme <br>[By Pancho412]</p>
+                        </div>
+                        <div class="cta-section">
+                            <a class="btn custom-button-smol">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card dark">
+                    <img src="numbers/icon.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="text-section">
+                            <h5 class="card-title fw-bold">Better water levels (Number)</h5>
+                            <p class="card-text">Better Drops for Default theme <br> [By Pancho412]</p>
+                        </div>
+                        <div class="cta-section">
+                            <a class="btn custom-button-smol">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card dark">
+                    <img src="img/icon.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="text-section">
+                            <h5 class="card-title fw-bold">Color Mod Compatibility</h5>
+                            <p class="card-text">Makes the theme Color Strings compatible <br> [By Pancho412]</p>
+                        </div>
+                        <div class="cta-section">
+                            <a class="btn custom-button-smol">Add</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="src/auxiliary.js"></script>
+    <script src="src/injector.js"></script>
+</body>
+</html>
