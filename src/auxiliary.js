@@ -1,5 +1,7 @@
 const html2canvas = window.html2canvas
 
+
+//Used for the log print in both tools
 async function exportLogToPDF() {
   const logElement = document.getElementById("log")
 
