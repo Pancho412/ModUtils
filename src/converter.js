@@ -324,7 +324,8 @@ async function ConvertMod() {
         <theme_extensions theme_extension_revision="1">
             <theme_extension
                 name="${mod1Data.info.name}"
-                path="${targetFolder}/${mod1Data.themeXmlPath}"/>
+                path="${targetFolder}/${mod1Data.themeXmlPath}"
+                is_mobile="false"/>
         </theme_extensions>
 
     </resource>
@@ -346,8 +347,8 @@ async function ConvertMod() {
     link.href = URL.createObjectURL(blob)
 
     link.download =
-        mod1Data.info.name.replace(/\s+/g, "_") +
-        "_extension.zip"
+        mod1Data.info.name.replace(/\s+/g, " ") +
+        ".mod"
 
     link.click()
 
