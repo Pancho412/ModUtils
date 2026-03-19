@@ -12,7 +12,7 @@ let updateMap = null
 let log_list = []
 
 async function loadUpdateMap() {
-  const response = await fetch("../update_logs/lny_2026_pc.json")
+  const response = await fetch("update_logs/lny_2026_pc.json")
   updateMap = await response.json()
 }
 loadUpdateMap()
