@@ -1,38 +1,34 @@
 const html2canvas = window.html2canvas
 
 
-//Used for the log print in both tools
-async function exportLogToPDF() {
-  const logElement = document.getElementById("log")
+function generatePDF() {
 
-  if (!logElement || logElement.innerText.trim() === "") {
-    alert("Log is empty")
-    return
-  }
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    let y = 15;
+    log_list.forEach(log => {
+        let type = log.match(/\[(.*?)\]/)[1];
+        switch(type){
+            case "info":
+                doc.setTextColor(0, 0, 255); // azul
+                break;
+            case "warning":
+                doc.setTextColor(255, 165, 0); // naranja
+                break;
+            case "error":
+                doc.setTextColor(255, 0, 0); // rojo
+                break;
+            default:
+                doc.setTextColor(0, 0, 0);
+        }
+        doc.text(log, 10, y);
+        y += 10;
+        // salto de página si es necesario
+        if (y > 280){
+            doc.addPage();
+            y = 10;
+        }
+    });
 
-  // Forzar que se vea completo (sin scroll)
-  const originalMaxHeight = logElement.style.maxHeight
-  const originalOverflow = logElement.style.overflow
-
-  logElement.style.maxHeight = "none"
-  logElement.style.overflow = "visible"
-
-  const canvas = await html2canvas(logElement, {
-    scale: 2,
-    backgroundColor: "#f8f9ff"
-  })
-
-  const imgData = canvas.toDataURL("image/png")
-  const { jsPDF } = window.jspdf
-
-  const pdf = new jsPDF("p", "mm", "a4")
-  const pdfWidth = pdf.internal.pageSize.getWidth()
-  const pdfHeight = (canvas.height * pdfWidth) / canvas.width
-
-  pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight)
-  pdf.save("mod_log.pdf")
-
-  // Restaurar estilos
-  logElement.style.maxHeight = originalMaxHeight
-  logElement.style.overflow = originalOverflow
+    doc.save("logs.pdf");
 }

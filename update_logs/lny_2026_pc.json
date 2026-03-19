@@ -1,0 +1,2391 @@
+{
+    "theme.xml" :{
+        "default_type" : "file",
+        "before" : "ui/instance.xml",
+        "include" : "ui/tt.xml",
+        "filename" : "tt.xml",
+        "elements" : {
+            "tt-window" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "base-frame", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "fadeDurationShow" : {"old_value" : null, "new_value" : "200", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+                "fadeDurationHide" : {"old_value" : null, "new_value" : "200", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+                "border" : {"old_value" : null, "new_value" : "45,8,8,8", "change_weigth" : 5, "type" : "add", "param_type" : "border"}
+            },
+            "tt-table" :{
+                "default_type" : "theme",
+                "before" : "tt-window",
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "table", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "son:header-table" : {
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "table", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "headerRowBackground" : {"old_value" : null, "new_value" : "ui-header.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"}
+                },
+                "son:scrollpane" : {
+                    "default_type" : "theme",
+                    "before" : "header-table",
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "scrollpane", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "son:content-table" : {
+                        "default_type" : "theme",
+                        "before" : null,
+                        "new" : true,
+                        "delete" : false,
+                        "ref" : {"old_value" : null, "new_value" : "table", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                        "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                        "headerRowBackground" : {"old_value" : null, "new_value" : "ui-inputbox.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                        "contentRowBackground" : {"old_value" : null, "new_value" : "ui-inputbox.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                        "background" : {"old_value" : null, "new_value" : "ui-table-row.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                        "son:tt-your-team":{
+                            "default_type" : "theme",
+                            "before" : null,
+                            "new" : true,
+                            "delete" : false,
+                            "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "font" : {"old_value" : null, "new_value" : "mechabold", "change_weigth" : 5, "type" : "add", "param_type" : "font"},
+                            "background" : {"old_value" : null, "new_value" : "ui-inputbox.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                            "border" : {"old_value" : null, "new_value" : "5", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+                            "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+                        },
+                        "son:tt-slot-icon":{
+                            "default_type" : "theme",
+                            "before" : "tt-your-team",
+                            "new" : true,
+                            "delete" : false,
+                            "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "background" : {"old_value" : null, "new_value" : "ui-table-row.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                            "border" : {"old_value" : null, "new_value" : "0", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+                            "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+                        },
+                        "son:tt-guild-tag":{
+                            "default_type" : "theme",
+                            "before" : "tt-slot-icon",
+                            "new" : true,
+                            "delete" : false,
+                            "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "background" : {"old_value" : null, "new_value" : "ui-table-row.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                            "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+                        },
+                        "son:tt-playername":{
+                            "default_type" : "theme",
+                            "before" : "tt-guild-tag",
+                            "new" : true,
+                            "delete" : false,
+                            "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "alphabeta" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-markup" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-markup", "new_value" : "main-markup", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-gray" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-gray", "new_value" : "main-gray", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-lightgray" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-lightgray", "new_value" : "main-lightgray", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-black" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-black", "new_value" : "main-black", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-green" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-green", "new_value" : "main-green", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-blue" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-blue", "new_value" : "main-blue", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-orange-shadow" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-orange-shadow", "new_value" : "main-orange-shadow", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-battle" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-battle", "new_value" : "main-battle", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-orange" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-orange", "new_value" : "main-orange", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-lightgreen" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-lightgreen", "new_value" : "main-lightgreen", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-purple" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-purple", "new_value" : "main-purple", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-teal" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-teal", "new_value" : "main-teal", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-red" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-red", "new_value" : "main-red", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-yellow" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-yellow", "new_value" : "main-yellow", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-brown" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-brown", "new_value" : "main-brown", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-gm" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-gm", "new_value" : "main-gm", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-cm" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-cm", "new_value" : "main-cm", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-hgm" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-hgm", "new_value" : "main-hgm", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-dev" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-dev", "new_value" : "main-dev", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-admin" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-admin", "new_value" : "main-admin", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-friend" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-friend", "new_value" : "main-friend", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-team" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-team", "new_value" : "main-team", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-link" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-link", "new_value" : "main-link", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-border" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-border-red" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-border-red", "new_value" : "main-border-red", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-border-friend" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-border-friend", "new_value" : "main-border-friend", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-border-team" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-border-team", "new_value" : "main-border-team", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-border-yellow" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-border-yellow", "new_value" : "main-border-yellow", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"},
+        "ref" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "alphabeta-small" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "name" : {"old_value" : "alphabeta-small", "new_value" : "main-small", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "pb-dark" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "console-green" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "console-red" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "console-blue" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "console-purple" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "console-orange" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "console" :{
+        "default_type" : "fontDef",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "ref" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "-base-"}
+    },
+    "-input" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "rbattle" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font2" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "editfieldautocompletionwindow" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+        "son:listbox" : {
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+        "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "editfield-errorinfowindow" :{
+        "default_type" : "theme",
+        "before" : "editfieldautocompletionwindow",
+        "new" : true,
+        "delete" : false,
+        "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "-init-" : {"old_value" : null, "new_value" : "ui-popup.*", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+        "minHeight" : {"old_value" : null, "new_value" : "35", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+        "son:label" : {
+            "default_type" : "theme",
+            "before" : null,
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "border" : {"old_value" : null, "new_value" : "10", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+            "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"},
+            "font" : {"old_value" : null, "new_value" : "main", "change_weigth" : 5, "type" : "add", "param_type" : "font"}
+        }
+    },
+    "combobox" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "popupDirection" : {"old_value" : null, "new_value" : "FIT", "change_weigth" : 4, "type" : "add", "param_type" : "enum:popupdirection"}
+    },
+    "valueadjuster" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "displaySuffix" : {"old_value" : null, "new_value" : null, "change_weigth" : 3, "type" : "add", "param_type" : "string"}
+    },
+    "tabbedframe" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" : {
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:nameplate" : {
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:label" : {
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        }
+    },
+    "listbox" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+        "son:display" : {
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "fpscounter" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "confirm-panel" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:textarea" : {
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "map:fonts" : {
+                "default" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                "link" : {"old_value" : "alphabeta-blue", "new_value" : "main-blue", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        }
+    },
+    "colorselector" :{
+        "default_type" : "theme",
+        "before" : "confirm-panel",
+        "new" : true,
+        "delete" : false,
+        "ref" : {"old_value" : null, "new_value" : "dialoglayout", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "mouseCursor." : {"old_value" : null, "new_value" : "eforen.cursor.arrow.*", "change_weigth" : 5, "type" : "add", "param_type" : "cursor"},
+        "son:label" : {
+            "default_type" : "theme",
+            "before" : null,
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"}
+        },
+        "son:colorarea1d" : {
+            "default_type" : "theme",
+            "before" : "label",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "background" : {"old_value" : null, "new_value" : "label5.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+            "cursor" : {"old_value" : null, "new_value" : "label6.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+            "border" : {"old_value" : null, "new_value" : "2", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+            "minWidth" : {"old_value" : null, "new_value" : "30", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+            "minHeight" : {"old_value" : null, "new_value" : "128", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+        },
+        "son:colorarea2d" : {
+            "default_type" : "theme",
+            "before" : "colorarea1d",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "background" : {"old_value" : null, "new_value" : "label5.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+            "cursor" : {"old_value" : null, "new_value" : "label6.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+            "border" : {"old_value" : null, "new_value" : "2", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+            "minWidth" : {"old_value" : null, "new_value" : "128", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+            "minHeight" : {"old_value" : null, "new_value" : "128", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+        },
+        "son:valueadjuster" : {
+            "default_type" : "theme",
+            "before" : "colorarea2d",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "valueadjuster", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "maxWidth" : {"old_value" : null, "new_value" : "32767", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+            "widht" : {"old_value" : null, "new_value" : "50", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+        },
+        "son:hexColorEditField" : {
+            "default_type" : "theme",
+            "before" : "valueadjuster",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "editfield", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "maxWidth" : {"old_value" : null, "new_value" : "32767", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+        },
+        "son:previewLabel" : {
+            "default_type" : "theme",
+            "before" : "hexColorEditField",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "text" : {"old_value" : null, "new_value" : "Current color:", "change_weigth" : 5, "type" : "add", "param_type" : "string"}
+        },
+        "son:preview" : {
+            "default_type" : "theme",
+            "before" : "previewLabel",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "dialoglayout", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "border" : {"old_value" : null, "new_value" : "2", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+            "minWidth" : {"old_value" : null, "new_value" : "64", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+            "minHeight" : {"old_value" : null, "new_value" : "64", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+            "son:colorarea" : {
+                "default_type" : "theme",
+                "before" : null,
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "background" : {"old_value" : null, "new_value" : "white.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"}
+            },
+            "son:previewLabel" : {
+                "default_type" : "theme",
+                "before" : "colorarea",
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"}
+            }
+        }
+    },
+    "gtl-buy-panel" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:textarea" : {
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "map:fonts" : {
+                "default" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                "link" : {"old_value" : "alphabeta-blue", "new_value" : "main-blue", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        }
+    },
+    "release-widget" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:confirm-panel" : {
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:scrollpane" : {
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:label" : {
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                },
+                "son:label-markup" : {
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta-markup", "new_value" : "main-markup", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        }
+    },
+    "disconnection-widget" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:confirm-panel" : {
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:label-default" : {
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:textarea" : {
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "map:fonts" : {
+                    "default" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                    "link" : {"old_value" : "alphabeta-blue", "new_value" : "main-blue", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        }
+    },
+    "trade-confirm-widget" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:scrollpane" : {
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:trade-frame-confirm-dialog" : {
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:label-markup" : {
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        }
+    },
+    "notification" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" : {
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : true
+        }
+    },
+    "tooltip-button" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "tooltip-button2" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "battle-move-button" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font2" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "battle-button-return" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+        "son:label" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:label-button" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "battle-button-register" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+        "son:label" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:label-button" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "battle-button" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font2" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+        "son:label" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "battle-button-ui" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-small", "new_value" : "main-small", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+        "font2" : {"old_value" : "alphabeta-small", "new_value" : "main-small", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+        "son:label" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-small", "new_value" : "main-small", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "battle-panel" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:label-black" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        },
+        "son:scrollpane" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:dialoglayout" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:button" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        },
+        "son:label" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "battle-item-usage-panel" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:scrollpane" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:label-black" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        },
+        "son:scrollpane" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:dialoglayout" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:button" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        }
+    },
+    "monster-preview-panel-label-red" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-red", "new_value" : "main-red", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "monster-preview-panel-label-grey" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "monster-preview-panel-label-yellow" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-yellow", "new_value" : "main-yellow", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "monster-preview-panel-label-teal" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-teal", "new_value" : "main-teal", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "contestgui" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:contestresulttext" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-gray", "new_value" : "main-gray", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:redlabel" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:contestresultmeter" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:label" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta-gray", "new_value" : "main-gray", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        }
+    },
+    "contest-button" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font2" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "contest-button-return" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font2" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "contest-panel" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:label-black" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        },
+        "son:scrollpane" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:dialoglayout" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:button" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        },
+        "son:label-black" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "hotkeybar-frame" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:title" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "chat-monster-info" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-blue", "new_value" : "main-blue", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "chat-monster-info-shiny" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-battle", "new_value" : "main-battle", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "chatresizableframe" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:title" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "chatframe" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:content" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:scrollpane" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:textarea" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "map:fonts" : {
+                        "default" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "color0" : {"old_value" : "alphabeta-green", "new_value" : "main-green", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "color1" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "color2" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "link" : {"old_value" : "alphabeta-link", "new_value" : "main-link", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "normal" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "shout" : {"old_value" : "alphabeta-orange", "new_value" : "main-orange", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "whisper" : {"old_value" : "alphabeta-lightgreen", "new_value" : "main-lightgreen", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "trade" : {"old_value" : "alphabeta-purple", "new_value" : "main-purple", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "global" : {"old_value" : "alphabeta-teal", "new_value" : "main-teal", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "channel" : {"old_value" : "alphabeta-yellow", "new_value" : "main-yellow", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "team" : {"old_value" : "alphabeta-brown", "new_value" : "main-brown", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "system" : {"old_value" : "alphabeta-blue", "new_value" : "main-blue", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "battle" : {"old_value" : "alphabeta-battle", "new_value" : "main-battle", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "link-highlight" : {"old_value" : "alphabeta-orange", "new_value" : "main-orange", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "normal-highlight" : {"old_value" : "alphabeta-orange", "new_value" : "main-orange", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "shout-highlight" : {"old_value" : "alphabeta-link", "new_value" : "main-link", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "whisper-highlight" : {"old_value" : "alphabeta-orange", "new_value" : "main-orange", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "trade-highlight" : {"old_value" : "alphabeta-orange", "new_value" : "main-orange", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "global-highlight" : {"old_value" : "alphabeta-orange", "new_value" : "main-orange", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "channel-highlight" : {"old_value" : "alphabeta-orange", "new_value" : "main-orange", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "team-highlight" : {"old_value" : "alphabeta-orange", "new_value" : "main-orange", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "system-highlight" : {"old_value" : "alphabeta-orange", "new_value" : "main-orange", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "battle-highlight" : {"old_value" : "alphabeta-orange", "new_value" : "main-orange", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                    }
+                }
+            },
+            "son:top" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:togglebutton-normal" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                },
+                "son:togglebutton-settings" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                },
+                "son:togglebutton-notification" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            },
+            "son:bottom" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:button" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                },
+                "son:editfield" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "son:renderer" :{
+                        "default_type" : "theme",
+                        "before" : null,
+                        "new" : false,
+                        "delete" : false,
+                        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                    }
+                }
+            }
+        }
+    },
+    "chat-playername" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "pm-box-frame" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:text-scrollpane" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:editfield" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                },
+                "son:textarea" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "map:fonts" : {
+                        "link" : {"old_value" : "alphabeta-blue", "new_value" : "main-blue", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                    }
+                }
+            }
+        }
+    },
+    "monsterdex-button" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "monster-frame" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:nameplate" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:label-level" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:label-monster-name" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        },
+        "son:itemplate" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:label" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:label2" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        }
+    },
+    "label-monster-area" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:button" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-small", "new_value" : "main-small", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:label-monster-title" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-small", "new_value" : "main-small", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:label-monster-title-wide" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-small", "new_value" : "main-small", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:label-monster-title-full" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-small", "new_value" : "main-small", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:label-monster-value" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-small", "new_value" : "main-small", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:label-hidden-ability" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-yellow", "new_value" : "main-yellow", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:label-monster-value-stat-complete" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-lightgreen", "new_value" : "main-lightgreen", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:label-monster-value-stat-bad" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-red", "new_value" : "main-red", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:label-monster-value-center" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-small", "new_value" : "main-small", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:label-monster-value-name" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:label" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "translate-link" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-orange-shadow", "new_value" : "main-orange-shadow", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "label-settings-title" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "minWidth" : {"old_value" : "220", "new_value" : "200", "change_weigth" : 3, "type" : "edit", "param_type" : "int"}
+    },
+    "editfield-settings-value-small" :{
+        "default_type" : "theme",
+        "before" : "label-settings-title-small",
+        "new" : true,
+        "delete" : false,
+        "ref" : {"old_value" : null, "new_value" : "editfield", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "minWidth" : {"old_value" : null, "new_value" : "40", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+        "columns" : {"old_value" : null, "new_value" : "3", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+    },
+    "label-settings-value" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "maxWidth" : {"old_value" : "250", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "int"}
+    },
+    "label-settings-vai" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "border" : {"old_value" : "0,0,0,20", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "int"},
+        "maxWidth" : {"old_value" : "250", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "int"}
+    },
+    "settings-colorselector" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : true,
+        "delete" : false,
+        "ref" : {"old_value" : "colorselector", "new_value" : null, "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "son:colorarea2d" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : "colorarea2d", "new_value" : null, "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "minWidth" : {"old_value" : "210", "new_value" : null, "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+        }
+    },
+    "settings-collapsiblemenu" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : true,
+        "delete" : false,
+        "ref" : {"old_value" : "collapsiblemenu", "new_value" : null, "change_weigth" : 5, "type" : "add", "param_type" : "-base-"}
+    },
+    "mods-panel" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:scrollpane" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:settings-label-area" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "son:dialoglayout" :{
+                        "default_type" : "theme",
+                        "before" : null,
+                        "new" : false,
+                        "delete" : false,
+                        "son:label-settings-value-modbuttons" :{
+                            "default_type" : "theme",
+                            "before" : null,
+                            "new" : false,
+                            "delete" : false,
+                            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rom-panel" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:scrollpane" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:settings-label-area" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "son:dialoglayout" :{
+                        "default_type" : "theme",
+                        "before" : null,
+                        "new" : false,
+                        "delete" : false,
+                        "son:label-settings-value-modbuttons" :{
+                            "default_type" : "theme",
+                            "before" : null,
+                            "new" : false,
+                            "delete" : false,
+                            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "mm-rental-window" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:pc-slot" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:label-dark" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        }
+    },
+    "label-hidden-ability" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-yellow", "new_value" : "main-yellow", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "mail-inner" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "headerRowBackground" : {"old_value" : null, "new_value" : "ui-header.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+            "contentRowBackground" : {"old_value" : null, "new_value" : "ui-inputbox.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+            "son:button" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "button", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "border" : {"old_value" : null, "new_value" : "6", "change_weigth" : 5, "type" : "add", "param_type" : "border"}
+            },
+            "son:button-row" :{
+                "default_type" : "theme",
+                "before" : "button",
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "button", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "background" : {"old_value" : null, "new_value" : "none", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                "border" : {"old_value" : null, "new_value" : "6", "change_weigth" : 5, "type" : "add", "param_type" : "border"}
+            },
+            "son:label-value" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "background" : {"old_value" : "ui-inputbox.background", "new_value" : "none", "change_weigth" : 5, "type" : "edit", "param_type" : "image"},
+                "textAlignment" : {"old_value" : "left", "new_value" : "CENTER", "change_weigth" : 5, "type" : "edit", "param_type" : "enum:alignment"}
+            },
+            "son:label-value-medium" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-value-small" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-value-small2" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-value-smallest" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-value-icon" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-title" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "defaultGap" : {"old_value" : "4,5", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "dimension"},
+                "smallGap" : {"old_value" : "4,5", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "dimension"},
+                "mediumGap" : {"old_value" : "4,5", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "dimension"},
+                "largeGap" : {"old_value" : "4,5", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "dimension"},
+                "namedGaps" : {"old_value" : "4,5", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "map:dimension"},
+                "background" : {"old_value" : "ui-header.background", "new_value" : "none", "change_weigth" : 5, "type" : "edit", "param_type" : "image"},
+                "border" : {"old_value" : null, "new_value" : "6", "change_weigth" : 5, "type" : "add", "param_type" : "border"}
+            },
+            "son:label-field" :{
+                "default_type" : "theme",
+                "before" : "label-title",
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "label-value", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "minWidth" : {"old_value" : null, "new_value" : "125", "change_weigth" : 3, "type" : "add", "param_type" : "int"},
+                "background" : {"old_value" : null, "new_value" : "ui-header.background", "change_weigth" : 3, "type" : "add", "param_type" : "image"},
+                "border" : {"old_value" : null, "new_value" : "6", "change_weigth" : 3, "type" : "add", "param_type" : "border"},
+                "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+            },
+            "son:label-title-medium" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-title-small" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-title-small2" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-title-smallest" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            }
+        }
+    },
+    "read-mail" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:label-value" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "background" : {"old_value" : "ui-inputbox.background", "new_value" : "none", "change_weigth" : 5, "type" : "edit", "param_type" : "image"}
+        },
+        "son:label-value-small" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : true
+        },
+        "son:label-title" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "background" : {"old_value" : "ui-header.background", "new_value" : "none", "change_weigth" : 5, "type" : "edit", "param_type" : "image"},
+            "border" : {"old_value" : null, "new_value" : "6", "change_weigth" : 5, "type" : "add", "param_type" : "border"}
+        },
+        "son:label-title-small" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : true
+        }
+    },
+    "trade-frame" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:dialoglayout" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:pokeframe" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "son:item-slot" :{
+                        "default_type" : "theme",
+                        "before" : null,
+                        "new" : false,
+                        "delete" : false,
+                        "font2" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                    }
+                }
+            }
+        }
+    },
+    "gameshop-item" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "minWidth" : {"old_value" : "420", "new_value" : "407", "change_weigth" : 1, "type" : "edit", "param_type" : "int"}
+    },
+    "link-status" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:link-slot" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:label" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        }
+    },
+    "town-map" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:townmap-cursor" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        }
+    },
+    "high-score-table" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:box-layout-row" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:label-self" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta-lightgreen", "new_value" : "main-lightgreen", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        }
+    },
+    "broker-table" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:label-muted" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-lightgray", "new_value" : "main-lightgray", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:cell-markup" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-markup", "new_value" : "main-markup", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:cell-warn" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "pb-dark", "new_value" : "pb-dark-yellow", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:cell-danger" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "pb-dark", "new_value" : "pb-dark-red", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:cell-positive" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "pb-dark", "new_value" : "pb-dark-green", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "pc-frame" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:preview-frame" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:label-markup" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta-markup", "new_value" : "main-markup", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:label-hidden-ability" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta-yellow", "new_value" : "main-yellow", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        },
+        "son:container" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:scrollpane" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:dialoglayout" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "son:label-battle-box" :{
+                        "default_type" : "theme",
+                        "before" : null,
+                        "new" : false,
+                        "delete" : false,
+                        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                    },
+                    "son:pc-slot" :{
+                        "default_type" : "theme",
+                        "before" : null,
+                        "new" : false,
+                        "delete" : false,
+                        "son:label-dark" :{
+                            "default_type" : "theme",
+                            "before" : null,
+                            "new" : false,
+                            "delete" : false,
+                            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                        }
+                    }
+                }
+            },
+            "son:dialoglayout" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:pc-slot" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "son:label-dark" :{
+                        "default_type" : "theme",
+                        "before" : null,
+                        "new" : false,
+                        "delete" : false,
+                        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                    }
+                }
+            }
+        }
+    },
+    "selectall-button" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "unselectall-button" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "edit-button" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "gmpanel" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:button" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-search" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-tools" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-player" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-sound" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-ping" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-support" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-gc" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:admin-small-frame" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:button" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:label-title" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:dialoglayout" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:button" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                },
+                "son:label-title" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        }
+    },
+    "tp-direction-widget" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:button" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "logingui" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:label" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:login-panel" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:label" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:tos-content" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:textarea" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "map:fonts" : {
+                        "default" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "orange" : {"old_value" : "alphabeta-brown", "new_value" : "main-brown", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "bold" : {"old_value" : "alphabeta-yellow", "new_value" : "main-yellow", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                        "link" : {"old_value" : "alphabeta-blue", "new_value" : "main-blue", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                    }
+                }
+            }
+        }
+    },
+    "characterselectgui" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:login-panel" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:container" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:character-select-button" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
+                    "son:dialoglayout" :{
+                        "default_type" : "theme",
+                        "before" : null,
+                        "new" : false,
+                        "delete" : false,
+                        "son:spritelabel" :{
+                            "default_type" : "theme",
+                            "before" : null,
+                            "new" : false,
+                            "delete" : false,
+                            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "event-tracker" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:label" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "encounter-counter" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:content" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:label" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        }
+    },
+    "encounter-counter-shiny" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:content" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:button" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:cell-markup" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta-markup", "new_value" : "main-markup", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        }
+    },
+    "hudgui" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:label" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "battle-party-select" :{
+        "default_type" : "theme",
+        "before" : "clause-failure",
+        "new" : true,
+        "delete" : false,
+        "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "son:label-monster-slot" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "background" : {"old_value" : null, "new_value" : "ui-inputbox.default", "change_weigth" : 5, "type" : "add", "param_type" : "image"}
+        },
+        "son:label-monster-violation" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "label-monster-slot", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "background" : {"old_value" : null, "new_value" : "ui-inputbox.red", "change_weigth" : 5, "type" : "add", "param_type" : "image"}
+        }
+    },
+    "nameplategui" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:nameplate-staff" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:nameplate" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:nameplate-friend" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-border-friend", "new_value" : "main-border-friend", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:nameplate-team" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta-border-team", "new_value" : "main-border-team", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "msgbox-move-selection-button" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font2" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "msgbox-return" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "spritetogglebutton" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "spritetogglebutton-outline" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "label-title" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "trainercard" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:label" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:spritelabel" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:label-centered" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:button" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            }
+        }
+    },
+    "movetutor" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:scrollpane" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:dialoglayout" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "son:battlebutton" :{
+                        "default_type" : "theme",
+                        "before" : null,
+                        "new" : false,
+                        "delete" : false,
+                        "font2" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                    }
+                }
+            }
+        }
+    },
+    "petitionframe" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:text-scrollpane" :{
+                "default_type" : "theme",
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:textarea" :{
+                    "default_type" : "theme",
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "map:fonts" : {
+                        "link" : {"old_value" : "alphabeta-blue", "new_value" : "main-blue", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                    }
+                }
+            }
+        }
+    },
+    "changelog-frame" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:button" :{
+            "default_type" : "theme",
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "effects-slot" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "server-status-success" :{
+        "default_type" : "theme",
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    }
+}
+    
