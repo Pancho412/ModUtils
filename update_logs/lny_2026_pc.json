@@ -401,7 +401,7 @@
             "default_type" : "theme",
             "before" : null,
             "new" : false,
-        "delete" : false,
+            "delete" : false,
             "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
         }
     },
@@ -687,7 +687,7 @@
                     "before" : null,
                     "new" : false,
                     "delete" : false,
-                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                    "font" : {"old_value" : "alphabeta-markup", "new_value" : "main-markup", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
                 }
             }
         }
@@ -965,7 +965,7 @@
         "before" : null,
         "new" : false,
         "delete" : false,
-        "font2" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
     },
     "contest-panel" :{
         "default_type" : "theme",
@@ -1380,25 +1380,25 @@
     },
     "settings-colorselector" :{
         "default_type" : "theme",
-        "before" : null,
+        "before" : "label-settings-vai",
         "new" : true,
         "delete" : false,
-        "ref" : {"old_value" : "colorselector", "new_value" : null, "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "ref" : {"old_value" : null, "new_value" : "colorselector", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
         "son:colorarea2d" :{
             "default_type" : "theme",
             "before" : null,
             "new" : true,
             "delete" : false,
-            "ref" : {"old_value" : "colorarea2d", "new_value" : null, "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
-            "minWidth" : {"old_value" : "210", "new_value" : null, "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+            "ref" : {"old_value" : null, "new_value" : "colorarea2d", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "minWidth" : {"old_value" : null, "new_value" : "210", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
         }
     },
     "settings-collapsiblemenu" :{
         "default_type" : "theme",
-        "before" : null,
+        "before" : "label-settings-value-small",
         "new" : true,
         "delete" : false,
-        "ref" : {"old_value" : "collapsiblemenu", "new_value" : null, "change_weigth" : 5, "type" : "add", "param_type" : "-base-"}
+        "ref" : {"old_value" : null, "new_value" : "collapsiblemenu", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"}
     },
     "mods-panel" :{
         "default_type" : "theme",
