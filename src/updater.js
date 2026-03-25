@@ -7,6 +7,7 @@ let zip_file
 let themes
 let uploadedFile = null
 
+let checked = []
 let issueItems = []
 let notFoundItems = []
 
