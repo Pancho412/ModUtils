@@ -4,18 +4,30 @@ const zip = new JSZip()
 let zip_file
 let themes
 let uploadedFile = null
+let ismobile = false
+let totalChanges = 0
 
 let checked = []
+let checkedInThisFile = []
 let issueItems = []
 let notFoundItems = []
 
 let updateMap = null
+let updateMapPC = null
+let updateMapAndroid = null
 
 let log_list = []
 
 async function loadUpdateMap() {
   const response = await fetch("../update_logs/lny_2026_pc.json")
-  updateMap = await response.json()
+  updateMapPC = await response.json()
+  const response2 = await fetch("../update_logs/lny_2026_mobile.json")
+  let updateMapAndroid_decomposed = await response2.json()
+
+  updateMapAndroid = {
+    ...updateMapPC,
+    ...updateMapAndroid_decomposed
+  }
 }
 loadUpdateMap()
 
@@ -83,6 +95,34 @@ uploadArea.addEventListener("drop", async (e) => {
     }
   }
 })
+
+
+// solve the issue with relative paths (../)
+function resolvePath(basePath, relativePath) {
+  if (relativePath.startsWith("/")) {
+    return relativePath.slice(1)
+  }
+
+  const baseParts = basePath.split("/").filter(p => p.length > 0)
+  const relParts = relativePath.split("/")
+
+  if (!basePath.endsWith("/")) {
+    baseParts.pop()
+  }
+
+  for (const part of relParts) {
+    if (part === "." || part === "")
+      continue
+    if (part === "..") {
+      baseParts.pop()
+    }
+    else {
+      baseParts.push(part)
+    }
+  }
+
+  return baseParts.join("/")
+}
 
 // read the dragged or uploaded file to see if it's a valid theme
 async function readfile() {
@@ -217,7 +257,7 @@ function addLog(message, type = "info") {
 }
 
 
-function updateItem(fileDoc,themesRoot,key,config,notfounds,fileModified,totalChanges){
+function updateItem(fileDoc,themesRoot,key,config,includelength,fileModified,totalChanges){
   const defaultType = config.default_type
 
   let insertAfterElement = false
@@ -231,7 +271,7 @@ function updateItem(fileDoc,themesRoot,key,config,notfounds,fileModified,totalCh
     if(config.before){
       elementbefore = themesRoot.querySelector(`${defaultType}[name="${config.before}"]`)
       if(!elementbefore){
-          return {notfounds, fileModified, totalChanges}
+          return {includelength, fileModified, totalChanges}
       }
       insertAfterElement = true
     }
@@ -250,37 +290,61 @@ function updateItem(fileDoc,themesRoot,key,config,notfounds,fileModified,totalCh
     }
         
     addLog(`${key} created after: ${config.before}`, "success")
-    checked.push(`${key}~${defaultType}`)
+    if(config.android){
+      checked.push(`${key}~${defaultType}~pc`)
+      checkedInThisFile.push(`${key}~${defaultType}~pc`)
+    }
+    else{
+      checked.push(`${key}~${defaultType}~mobile`)
+      checkedInThisFile.push(`${key}~${defaultType}~mobile`)
+    }
+    
     fileModified = true
     totalChanges++
-    return {notfounds, fileModified, totalChanges}
+    return {includelength, fileModified, totalChanges}
   }
 
   if(!element){
-    notfounds += 1
-    addLog(`${key} not found`,'warning')
-    return {notfounds, fileModified, totalChanges}
+    if(includelength == 0){
+      addLog(`${key} not found`,'warning')
+      issueItems.push(`${key}~${defaultType} Not Found`)
+    }
+    return {includelength, fileModified, totalChanges}
   }
   addLog(`${key} : ${defaultType} found`,'info')
 
   if(config.delete == true){
     element.remove()
-    checked.push(`${key}~${defaultType}`)
+    if(config.android){
+      checked.push(`${key}~${defaultType}~pc`)
+      checkedInThisFile.push(`${key}~${defaultType}~pc`)
+    }
+    else{
+      checked.push(`${key}~${defaultType}~mobile`)
+      checkedInThisFile.push(`${key}~${defaultType}~mobile`)
+    }
     fileModified = true
     totalChanges++
-    return {notfounds, fileModified, totalChanges}
+    return {includelength, fileModified, totalChanges}
   }
     
   const changesMade = updateMatched(element, config)
   if (changesMade) {
-    checked.push(`${key}~${defaultType}`)
+    if(config.android){
+      checked.push(`${key}~${defaultType}~mobile`)
+      checkedInThisFile.push(`${key}~${defaultType}~mobile`)
+    }
+    else{
+      checked.push(`${key}~${defaultType}~pc`)
+      checkedInThisFile.push(`${key}~${defaultType}~pc`)
+    }
     fileModified = true
     totalChanges++
   }
   else{
-    issueItems.push(`${key}~${defaultType}`)
+    issueItems.push(`${key}~${defaultType} Failed To update`)
   }
-  return {notfounds, fileModified, totalChanges}
+  return {includelength, fileModified, totalChanges}
 }
 
 function createNewParam(doc, name, config, type){
@@ -341,7 +405,7 @@ function insertInclude(config, themeDoc) {
   addLog(`include ${config.include} added to theme.xml`, "success")
 }
 
-async function handleNewXmlFile(config, themeDoc, themePath, zip_file, modifiedFiles) {
+async function handleNewXmlFile(config, themeDoc, themePath, zip_file, modifiedFiles,themeXmlPath) {
   const parser = new DOMParser()
 
   const newFilePath = themePath + config.include
@@ -388,13 +452,93 @@ async function handleNewXmlFile(config, themeDoc, themePath, zip_file, modifiedF
 
   const updatedTheme = serializer.serializeToString(themeDoc)
 
-  const themeXmlPath = themePath + "theme.xml"
   modifiedFiles.set(themeXmlPath, updatedTheme)
 
   addLog(`theme.xml updated with <include>`, "success")
   
 
 }
+
+async function processXmlRecursive(filePath, parser, zip_file, updateMap, modifiedFiles, includelength) {
+  const filezip = zip_file.file(filePath)
+
+  if (!filezip) {
+    addLog(`${filePath} not found`, "error")
+    return
+  }
+
+  addLog(`Opening ${filePath}`, "info")
+
+  const fileContent = await filezip.async("string")
+  const fileDoc = parser.parseFromString(fileContent, "text/xml")
+
+  const themesRoot = fileDoc.querySelector("themes")
+  if (!themesRoot) {
+    addLog("<themes> root not found", "error")
+    return
+  }
+
+  let fileModified = false
+  let notfounds = 0
+
+  // i love for loops 
+  
+  // for each change in the json
+  for (const key in updateMap) {
+    const config = updateMap[key]
+
+    // already checked
+    
+    if (key === "theme.xml"){
+      continue
+    }
+
+    let updatetype = "pc"
+    if (config.android){
+      updatetype = "mobile"
+    }
+    else{
+      updatetype = "pc"
+    }
+
+    const checkedKey = checked.find(checkedElement => checkedElement.split("~")[0] == key && checkedElement.split("~")[1] == config.default_type && checkedElement.split("~")[2] == updatetype)
+    const checkedKeyInThisFile = checkedInThisFile.find(checkedElementInThisFile => checkedElementInThisFile.split("~")[0] == key && checkedElementInThisFile.split("~")[1] == config.default_type)
+    if(checkedKeyInThisFile)
+      continue
+    if (checkedKey){
+      if(checkedKey.split("~")[2] == "pc" && !config.android)
+        continue
+      if(checkedKey.split("~")[2] == "mobile" && config.android)
+        continue
+    }
+
+    result = updateItem(fileDoc,themesRoot,key,config,includelength,fileModified,totalChanges)
+    includelength = result.includelength
+    fileModified = result.fileModified
+    totalChanges = result.totalChanges
+  }
+  includelength -= 1
+
+  const includeNodes = fileDoc.querySelectorAll("include")
+
+  for (const inc of includeNodes) {
+    const relativePath = inc.getAttribute("filename")
+
+    const nextPath = resolvePath(filePath, relativePath)
+
+    includelength += 1
+    await processXmlRecursive(nextPath, parser, zip_file, updateMap, modifiedFiles)
+  }
+  
+  // Save modified file back to zip
+  if (fileModified) {
+    const serializer = new XMLSerializer()
+    const updatedContent = serializer.serializeToString(fileDoc)
+    modifiedFiles.set(filePath, updatedContent)
+    addLog(`File ${filePath} marked for update`, "success")
+  }
+}
+
 
 // Create a new XML element from config with proper formatting
 function createNewElement(doc, name, config, indentLevel = 1) {
@@ -411,7 +555,7 @@ function createNewElement(doc, name, config, indentLevel = 1) {
   // for each key in the config
   for (const attributeKey in config) {
     // not update params
-    if (attributeKey === "default_type" || attributeKey === "new" || attributeKey === "delete" || attributeKey == "before")
+    if (attributeKey === "default_type" || attributeKey === "new" || attributeKey === "delete" || attributeKey == "before" || attributeKey == "android")
       continue
     
     // get the config for the param {"old_value" : .. , "new_value" : .. , "change_weigth" : ....}
@@ -460,7 +604,7 @@ function updateMatched(matchedElement, config){
   
   for (const attributeKey in config) {
             
-    if (attributeKey === "default_type" || attributeKey == "new" || attributeKey == "delete" || attributeKey == "before")
+    if (attributeKey === "default_type" || attributeKey == "new" || attributeKey == "delete" || attributeKey == "before" || attributeKey == "android")
       continue
 
     const attrConfig = config[attributeKey]
@@ -503,6 +647,7 @@ function updateMatched(matchedElement, config){
 
       if (sonElements.length === 0) {
         addLog(`son ${childName} not found`, "error")
+        issueItems.push(`son ${childName} Not Found`) // Add parent
         continue
       }
 
@@ -538,12 +683,14 @@ function updateMatched(matchedElement, config){
         const paramElement = matchedElement.querySelector(`:scope > param[name="${mapName}"]`)
         if (!paramElement) {
           addLog(`- map ${mapName} not found`, "warning")
+          issueItems.push(`map ${mapName} Not Found`)
           continue
         }
 
         const mapElement = paramElement.querySelector("map")
         if (!mapElement) {
           addLog(`- <map> inside ${mapName} not found`, "warning")
+          issueItems.push(`<map> inside ${mapName} Not Found`)
           continue
         }
 
@@ -574,6 +721,7 @@ function updateMatched(matchedElement, config){
 
           if (!mapParam) {
             addLog(`- map param ${mapKey} not found`, "warning")
+            issueItems.push(`map param ${mapKey} Not Found`)
             continue
           }
 
@@ -589,6 +737,7 @@ function updateMatched(matchedElement, config){
 
             if (!innerElement) {
               addLog(`- ${mapItemConfig.param_type} not found in map param ${mapKey}`, "warning")
+              issueItems.push(`- ${mapItemConfig.param_type} not found in map param ${mapKey}`)
               continue
             }
 
@@ -648,6 +797,7 @@ function updateMatched(matchedElement, config){
         const paramElement = matchedElement.querySelector(`:scope > param[name="${attributeKey}"]`)
         if (!paramElement) {
           addLog(`- param ${attributeKey} not found`, "warning")
+          issueItems.push(`- param ${attributeKey} not found`)
           continue
         }
         
@@ -662,6 +812,7 @@ function updateMatched(matchedElement, config){
         }
         if (!innerElement) {
           addLog(`- ${paramType} not found in param ${attributeKey}`, "warning")
+          issueItems.push(`- ${paramType} not found in param ${attributeKey}`)
           continue
         }
         
@@ -686,6 +837,7 @@ function updateMatched(matchedElement, config){
       else{
         const paramElement = matchedElement.querySelector(`:scope > param[name="${attributeKey}"]`)
         addLog(`OBJ param ${paramElement ? paramElement.textContent : 'not found'}`, "warning")
+        issueItems.push(`OBJ param ${paramElement ? paramElement.textContent : 'not found'}`)
       }
     }
     else {
@@ -693,6 +845,7 @@ function updateMatched(matchedElement, config){
 
       if (!currentValue) {
         addLog(`- atribute ${attributeKey} not found`, "warning")
+        issueItems.push(`- atribute ${attributeKey} not found`)
         continue
       }
 
@@ -738,25 +891,46 @@ async function processZip() {
     }
 
     const modifiedFiles = new Map() // Track modified files
-    let totalChanges = 0
 
     // For each theme 
     for (let i = 0; i < themes.length; i++) {
 
       const theme = themes[i]
+      ismobile = theme.getAttribute("is_mobile") == "true"
+
+      if (ismobile) {
+        updateMap = updateMapAndroid
+        addLog(`Using mobile update for theme: ${theme.getAttribute("name")}`, "info")
+      }
+      else{
+        updateMap = updateMapPC
+        addLog(`Using PC update for theme: ${theme.getAttribute("name")}`, "info")
+      }
+
       let themePath = theme.getAttribute("path") || ""
+
 
       if (!themePath.endsWith("/")) {
           themePath += "/"
       }
 
       // Reading theme.xml
-      const themeXmlPath = themePath + "theme.xml"
-      const themeXmlFile = zip_file.file(themeXmlPath)
+      let themeXmlPath = themePath + "theme.xml"
+      let themeXmlFile = zip_file.file(themeXmlPath)
 
       if (!themeXmlFile) {
-          addLog(`${themeXmlPath} not found`, "error")
-          continue
+          addLog(`${themeXmlPath} not found, trying lowercase`, "error")
+          themeXmlPath = themePath.toLowerCase() + "theme.xml"
+          themeXmlFile = zip_file.file(themeXmlPath)
+          if(!themeXmlFile){
+            addLog(`${themeXmlPath} not found, trying lowercase on last folder`, "error")
+            themeXmlPath = themePath.replace(themePath.split("/")[themePath.split("/").length -2],themePath.split("/")[themePath.split("/").length -2].toLowerCase()) + "theme.xml"
+            themeXmlFile = zip_file.file(themeXmlPath)
+            if(!themeXmlFile){
+              addLog(`${themeXmlPath} not found, no more tries`, "error")
+              continue
+            }
+          }
       }
 
       addLog(`Reading ${themeXmlPath}`, "info")
@@ -777,63 +951,20 @@ async function processZip() {
       }
 
       if (updateMap["theme.xml"]) {
-          await handleNewXmlFile(updateMap["theme.xml"],themeDoc,themePath,zip_file,modifiedFiles)
+          await handleNewXmlFile(updateMap["theme.xml"],themeDoc,themePath,zip_file,modifiedFiles,themeXmlPath)
           checked.push(`theme.xml~${updateMap["theme.xml"].default_type}`)
       }
 
+      let includelength = includeNode2.length
       // for each included file
       for(const fileIncluded of includeNode2){
-        const filePath = themePath + fileIncluded.getAttribute("filename")
-        const filezip = zip_file.file(filePath)
-
-        if (!filezip) {
-          addLog(`${filePath} not found`, "error")
-          continue
-        }
-
-        addLog(`Opening ${filePath}`, "info")
-
-        const fileContent = await filezip.async("string")
-        const fileDoc = parser.parseFromString(fileContent, "text/xml")
-
-        const themesRoot = fileDoc.querySelector("themes")
-        if (!themesRoot) {
-          addLog("<themes> root not found", "error")
-          continue
-        }
-
-        let fileModified = false
-        let notfounds = 0
-
-        // i love for loops 
+        checkedInThisFile = []
+        const relativePath = fileIncluded.getAttribute("filename")
+        const filePath = resolvePath(themeXmlPath, relativePath)
         
-        // for each change in the json
-        for (const key in updateMap) {
-          const config = updateMap[key]
-
-          // already checked
-          
-          const checkedKey = checked.find(checkedElement => checkedElement.split("~")[0] == key && checkedElement.split("~")[1] == config.default_type)
-          if (checkedKey || key === "theme.xml"){
-            continue
-          }
-
-          result = updateItem(fileDoc,themesRoot,key,config,notfounds,fileModified,totalChanges)
-          notfounds = result.notfounds
-          fileModified = result.fileModified
-          totalChanges = result.totalChanges
-        }
-        
-        // Save modified file back to zip
-        if (fileModified) {
-          const serializer = new XMLSerializer()
-          const updatedContent = serializer.serializeToString(fileDoc)
-          modifiedFiles.set(filePath, updatedContent)
-          addLog(`File ${filePath} marked for update`, "success")
-        }
-      } 
+        await processXmlRecursive(filePath, parser, zip_file, updateMap, modifiedFiles, includelength)
+      }
     }
-
     // Apply all modifications to the zip
     if (modifiedFiles.size > 0) {
       const infoXmlFile = zip_file.file("info.xml")
@@ -870,7 +1001,6 @@ async function processZip() {
       URL.revokeObjectURL(downloadLink.href)
       
       addLog(`Update complete! ${totalChanges} changes applied.`, "success")
-      console.log(issueItems)
       if(issueItems.length > 0){
         addLog(`Total issues: ${issueItems.length}`, "warning")
         for(const issues of issueItems){
@@ -885,6 +1015,7 @@ async function processZip() {
       addLog("No changes needed - theme is up to date!", "success")
       btnText.textContent = "Already Updated"
     }
+    addLog(`Any feedback, bug or error contact pancho412 on discord`, "info")
       
   } catch (error) {
     addLog(`${error.message}`, "error")

@@ -1,0 +1,761 @@
+{
+    "theme.xml" :{
+        "default_type" : "file",
+        "android" : true,
+        "before" : "ui/android-instance.xml",
+        "include" : "ui/android-tt.xml",
+        "filename" : "android-tt.xml",
+        "elements" : {
+            "tt-window" :{
+                "default_type" : "theme",
+                "android" : true,
+                "before" : null,
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "mobile-panel", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "border" : {"old_value" : null, "new_value" : "60,0,0,0", "change_weigth" : 5, "type" : "add", "param_type" : "border"}
+            },
+            "tt-table" :{
+                "default_type" : "theme",
+                "android" : true,
+                "before" : "tt-window",
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "mobile-table", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "son:header-table" : {
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "table", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "headerRowBackground" : {"old_value" : null, "new_value" : "mobile.box.dark3.50.table", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                    "son:label" : {
+                        "default_type" : "theme",
+                        "android" : false,
+                        "before" : null,
+                        "new" : true,
+                        "delete" : false,
+                        "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                        "font" : {"old_value" : null, "new_value" : "med-noshadow-16-white", "change_weigth" : 5, "type" : "add", "param_type" : "font"},
+                        "background" : {"old_value" : null, "new_value" : "none", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                        "border" : {"old_value" : null, "new_value" : "0", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+                        "textAlignment" : {"old_value" : null, "new_value" : "LEFT", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+                    }
+                },
+                "son:scrollpane" : {
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : "header-table",
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "scrollpane", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "son:content-table" : {
+                        "default_type" : "theme",
+                        "android" : false,
+                        "before" : null,
+                        "new" : true,
+                        "delete" : false,
+                        "ref" : {"old_value" : null, "new_value" : "table", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                        "headerRowBackground" : {"old_value" : null, "new_value" : "mobile.box.dark1.50", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                        "contentRowBackground" : {"old_value" : null, "new_value" : "mobile.box.dark1.50", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                        "background" : {"old_value" : null, "new_value" : "none", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                        "son:label" : {
+                            "default_type" : "theme",
+                            "android" : false,
+                            "before" : null,
+                            "new" : true,
+                            "delete" : false,
+                            "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "font" : {"old_value" : null, "new_value" : "med-noshadow-16-white", "change_weigth" : 5, "type" : "add", "param_type" : "font"},
+                            "background" : {"old_value" : null, "new_value" : "none", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                            "border" : {"old_value" : null, "new_value" : "0", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+                            "textAlignment" : {"old_value" : null, "new_value" : "LEFT", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+                        },
+                        "son:tt-playername":{
+                            "default_type" : "theme",
+                            "android" : false,
+                            "before" : "label",
+                            "new" : true,
+                            "delete" : false,
+                            "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "font" : {"old_value" : null, "new_value" : "med-noshadow-12-white", "change_weigth" : 5, "type" : "add", "param_type" : "font"},
+                            "background" : {"old_value" : null, "new_value" : "none", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                            "border" : {"old_value" : null, "new_value" : "0", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+                            "textAlignment" : {"old_value" : null, "new_value" : "LEFT", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+                        },
+                        "son:tt-your-team":{
+                            "default_type" : "theme",
+                            "android" : false,
+                            "before" : "tt-playername",
+                            "new" : true,
+                            "delete" : false,
+                            "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "background" : {"old_value" : null, "new_value" : "none", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                            "border" : {"old_value" : null, "new_value" : "5", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+                            "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+                        },
+                        "son:tt-slot-icon":{
+                            "default_type" : "theme",
+                            "android" : false,
+                            "before" : "tt-your-team",
+                            "new" : true,
+                            "delete" : false,
+                            "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "background" : {"old_value" : null, "new_value" : "mobile.box.dark1.50", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                            "border" : {"old_value" : null, "new_value" : "0", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+                            "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+                        },
+                        "son:tt-guild-tag":{
+                            "default_type" : "theme",
+                            "android" : false,
+                            "before" : "tt-slot-icon",
+                            "new" : true,
+                            "delete" : false,
+                            "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                            "font" : {"old_value" : null, "new_value" : "med-noshadow-14-white", "change_weigth" : 5, "type" : "add", "param_type" : "font"},
+                            "background" : {"old_value" : null, "new_value" : "mobile.box.dark1.50", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                            "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "med-noshadow-12-white" :{
+        "default_type" : "fontDef",
+        "android" : false,
+        "before" : "level",
+        "new" : true,
+        "delete" : false,
+        "name" : {"old_value" : null, "new_value" : "med-noshadow-12-white", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "filename" : {"old_value" : null, "new_value" : "../default/res/fonts/NotoSansCJK-Bold.ttc", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "faces" : {"old_value" : null, "new_value" : "sc,tc,jp", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "font_color" : {"old_value" : null, "new_value" : "#FFFFFF", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "size" : {"old_value" : null, "new_value" : "12", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"}
+    },
+    "editfield-errorinfowindow" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : "editfield-fancy",
+        "new" : true,
+        "delete" : false,
+        "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "-init-" : {"old_value" : null, "new_value" : "ui-popup.*", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+        "minHeight" : {"old_value" : null, "new_value" : "35", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+        "son:label" :{
+            "default_type" : "theme",
+            "android" : null,
+            "before" : null,
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "border" : {"old_value" : null, "new_value" : "10", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+            "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"},
+            "font" : {"old_value" : null, "new_value" : "xlarge", "change_weigth" : 5, "type" : "add", "param_type" : "font"}
+        }
+    },
+    "combobox" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "popupDirection" : {"old_value" : null, "new_value" : "FIT", "change_weigth" : 3, "type" : "edit", "param_type" : "enum:popupdirection"}
+    },
+    "notification" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "android" : null,
+            "before" : null,
+            "new" : false,
+            "delete" : true
+        },
+        "son:label" :{
+            "default_type" : "theme",
+            "android" : null,
+            "before" : null,
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "border" : {"old_value" : null, "new_value" : "10", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+            "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"},
+            "font" : {"old_value" : null, "new_value" : "xlarge", "change_weigth" : 5, "type" : "add", "param_type" : "font"}
+        }
+    },
+    "characterselectgui" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:login-panel" :{
+            "default_type" : "theme",
+            "android" : null,
+            "before" : null,
+            "new" : false,
+            "delete" : true,
+            "son:container" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : true,
+                "son:character-select-button" :{
+                    "default_type" : "theme",
+                    "android" : null,
+                    "before" : null,
+                    "new" : false,
+                    "delete" : true,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        }
+    },
+    "tooltip-button" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "tooltip-button2" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "clause-failure" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:combobox" :{
+            "default_type" : "theme",
+            "android" : null,
+            "before" : "label-blurb",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "combobox", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "popupDirection" : {"old_value" : null, "new_value" : "TOP", "change_weigth" : 5, "type" : "add", "param_type" : "enum:popupdirection"}
+        }
+    },
+    "togglebutton-settings" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "togglebutton-notification" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "hotkeybar-frame" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:title" :{
+            "default_type" : "theme",
+            "android" : null,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        }
+    },
+    "label-monster-value-name" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "settings-collapsiblemenu" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : "label-settings-value-small",
+        "new" : true,
+        "delete" : false,
+        "ref" : {"old_value" : null, "new_value" : "collapsiblemenu", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "background" : {"old_value" : null, "new_value" : "none", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+        "son:label" :{
+            "default_type" : "theme",
+            "android" : null,
+            "before" : null,
+            "new" : true,
+            "delete" : false,
+            "font" : {"old_value" : null, "new_value" : "med-noshadow-18-white", "change_weigth" : 5, "type" : "add", "param_type" : "font"}
+        }
+    },
+    "mods-panel" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "android" : null,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:scrollpane" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:settings-label-area" :{
+                    "default_type" : "theme",
+                    "android" : null,
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "son:dialoglayout" :{
+                        "default_type" : "theme",
+                        "android" : null,
+                        "before" : null,
+                        "new" : false,
+                        "delete" : false,
+                        "son:label-settings-value-modbuttons" :{
+                            "default_type" : "theme",
+                            "android" : null,
+                            "before" : null,
+                            "new" : false,
+                            "delete" : false,
+                            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "mm-rental-window" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "android" : null,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:pc-slot" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:label-dark" :{
+                    "default_type" : "theme",
+                    "android" : null,
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        }
+    },
+    "mail-window" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "android" : null,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:tabbedpane" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "tabPosition" : {"old_value" : "LEFT", "new_value" : null, "change_weigth" : 5, "type" : "delete", "param_type" : "enum:tabposition"},
+                "border" : {"old_value" : "60,0,0,0", "new_value" : "0,0,0,0", "change_weigth" : 5, "type" : "edit", "param_type" : "border"},
+                "son:tabbox" :{
+                    "default_type" : "theme",
+                    "android" : null,
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "border" : {"old_value" : null, "new_value" : "0,350,0,6", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+                    "spacing" : {"old_value" : null, "new_value" : "10", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+                    "alignment" : {"old_value" : null, "new_value" : "FILL", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"},
+                    "son:tabbutton" :{
+                        "default_type" : "theme",
+                        "android" : null,
+                        "before" : null,
+                        "new" : false,
+                        "delete" : false,
+                        "minHeight" : {"old_value" : null, "new_value" : "60", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+                    }
+                }
+            }
+        }
+    },
+    "mail-inner" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "android" : null,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "headerRowBackground" : {"old_value" : null, "new_value" : "ui-header.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+            "contentRowBackground" : {"old_value" : null, "new_value" : "mobile.button.flat.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+            "son:button" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "minWidth" : {"old_value" : "200", "new_value" : "50", "change_weigth" : 5, "type" : "edit", "param_type" : "int"},
+                "minHeight" : {"old_value" : "60", "new_value" : null, "change_weigth" : 5, "type" : "delete", "param_type" : "int"}
+            },
+            "son:button-row" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "button", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "overwrite" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "minHeight" : {"old_value" : null, "new_value" : "46", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+                "background" : {"old_value" : null, "new_value" : "none", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                "font" : {"old_value" : null, "new_value" : "med-noshadow-18-white", "change_weigth" : 5, "type" : "add", "param_type" : "font"}
+            },
+            "son:label-value" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "background" : {"old_value" : "mobile.button.flat.background", "new_value" : "none", "change_weigth" : 5, "type" : "edit", "param_type" : "image"},
+                "minHeight" : {"old_value" : null, "new_value" : "50", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+            },
+            "son:label-value-medium" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-value-small" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-value-small2" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-value-smallest" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-value-icon" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-title" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : "label-value",
+                "new" : false,
+                "delete" : false,
+                "defaultGap" : {"old_value" : "4,5", "new_value" : null, "change_weigth" : 5, "type" : "delete", "param_type" : "dimension"},
+                "smallGap" : {"old_value" : "8,8", "new_value" : null, "change_weigth" : 5, "type" : "delete", "param_type" : "dimension"},
+                "mediumGap" : {"old_value" : "10,10", "new_value" : null, "change_weigth" : 5, "type" : "delete", "param_type" : "dimension"},
+                "largeGap" : {"old_value" : "15,15", "new_value" : null, "change_weigth" : 5, "type" : "delete", "param_type" : "dimension"},
+                "namedGaps" : {"old_value" : null, "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "map:dimension"},
+                "overwrite" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "minWidth" : {"old_value" : null, "new_value" : "250", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+                "background" : {"old_value" : "ui-header.background", "new_value" : "none", "change_weigth" : 5, "type" : "edit", "param_type" : "image"},
+                "border" : {"old_value" : null, "new_value" : "6", "change_weigth" : 5, "type" : "add", "param_type" : "border"}
+            },
+            "son:label-field" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : "label-value",
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "label-value", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "overwrite" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "minWidth" : {"old_value" : null, "new_value" : "250", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+                "background" : {"old_value" : null, "new_value" : "ui-header.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"},
+                "border" : {"old_value" : null, "new_value" : "6", "change_weigth" : 5, "type" : "add", "param_type" : "border"}
+            },
+            "son:label-title-medium" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-title-small" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-title-small2" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            },
+            "son:label-title-smallest" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : true
+            }
+        }
+    },
+    "gmpanel" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:button" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-search" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-tools" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-player" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-sound" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-ping" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-support" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:button-gc" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+        },
+        "son:admin-small-frame" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:button" :{
+                "default_type" : "theme",
+                "android" : false,
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:label-title" :{
+                "default_type" : "theme",
+                "android" : false,
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+            },
+            "son:dialoglayout" :{
+                "default_type" : "theme",
+                "android" : false,
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:button" :{
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                },
+                "son:label-title" :{
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        }
+    },
+    "container" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:scrollpane" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:dialoglayout" :{
+                "default_type" : "theme",
+                "android" : false,
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:pc-slot" :{
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "son:label-dark" :{
+                        "default_type" : "theme",
+                        "android" : false,
+                        "before" : null,
+                        "new" : false,
+                        "delete" : false,
+                        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                    }
+                }
+            }
+        }
+    },
+    "selectall-button" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "unselectall-button" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "incubator-frame" :{
+        "default_type" : "theme",
+        "android" : true,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:incubator-main-table" :{
+            "default_type" : "theme",
+            "android" : null,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "son:incubator-slot" :{
+                "default_type" : "theme",
+                "android" : null,
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:label-dark" :{
+                    "default_type" : "theme",
+                    "android" : null,
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+                }
+            }
+        }
+    }
+}

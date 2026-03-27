@@ -1,12 +1,14 @@
 {
     "theme.xml" :{
         "default_type" : "file",
+        "android" : false,
         "before" : "ui/instance.xml",
         "include" : "ui/tt.xml",
         "filename" : "tt.xml",
         "elements" : {
             "tt-window" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : true,
                 "delete" : false,
@@ -17,6 +19,7 @@
             },
             "tt-table" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : "tt-window",
                 "new" : true,
                 "delete" : false,
@@ -24,6 +27,7 @@
                 "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
                 "son:header-table" : {
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : true,
                     "delete" : false,
@@ -33,12 +37,14 @@
                 },
                 "son:scrollpane" : {
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : "header-table",
                     "new" : true,
                     "delete" : false,
                     "ref" : {"old_value" : null, "new_value" : "scrollpane", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
                     "son:content-table" : {
                         "default_type" : "theme",
+                        "android" : false,
                         "before" : null,
                         "new" : true,
                         "delete" : false,
@@ -49,6 +55,7 @@
                         "background" : {"old_value" : null, "new_value" : "ui-table-row.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
                         "son:tt-your-team":{
                             "default_type" : "theme",
+                            "android" : false,
                             "before" : null,
                             "new" : true,
                             "delete" : false,
@@ -60,6 +67,7 @@
                         },
                         "son:tt-slot-icon":{
                             "default_type" : "theme",
+                            "android" : false,
                             "before" : "tt-your-team",
                             "new" : true,
                             "delete" : false,
@@ -71,6 +79,7 @@
                         },
                         "son:tt-guild-tag":{
                             "default_type" : "theme",
+                            "android" : false,
                             "before" : "tt-slot-icon",
                             "new" : true,
                             "delete" : false,
@@ -81,6 +90,7 @@
                         },
                         "son:tt-playername":{
                             "default_type" : "theme",
+                            "android" : false,
                             "before" : "tt-guild-tag",
                             "new" : true,
                             "delete" : false,
@@ -94,6 +104,7 @@
     },
     "alphabeta" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -101,6 +112,7 @@
     },
     "alphabeta-markup" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -108,6 +120,7 @@
     },
     "alphabeta-gray" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -116,6 +129,7 @@
     },
     "alphabeta-lightgray" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -124,6 +138,7 @@
     },
     "alphabeta-black" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -132,6 +147,7 @@
     },
     "alphabeta-green" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -140,6 +156,7 @@
     },
     "alphabeta-blue" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -148,6 +165,7 @@
     },
     "alphabeta-orange-shadow" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -156,6 +174,7 @@
     },
     "alphabeta-battle" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -164,6 +183,7 @@
     },
     "alphabeta-orange" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -172,6 +192,7 @@
     },
     "alphabeta-lightgreen" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -180,6 +201,7 @@
     },
     "alphabeta-purple" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -188,6 +210,7 @@
     },
     "alphabeta-teal" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -196,6 +219,7 @@
     },
     "alphabeta-red" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -204,6 +228,7 @@
     },
     "alphabeta-yellow" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -212,6 +237,7 @@
     },
     "alphabeta-brown" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -220,6 +246,7 @@
     },
     "alphabeta-gm" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -228,6 +255,7 @@
     },
     "alphabeta-cm" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -236,6 +264,7 @@
     },
     "alphabeta-hgm" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -244,6 +273,7 @@
     },
     "alphabeta-dev" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -252,6 +282,7 @@
     },
     "alphabeta-admin" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -260,6 +291,7 @@
     },
     "alphabeta-friend" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -268,6 +300,7 @@
     },
     "alphabeta-team" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -276,6 +309,7 @@
     },
     "alphabeta-link" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -284,6 +318,7 @@
     },
     "alphabeta-border" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -291,6 +326,7 @@
     },
     "alphabeta-border-red" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -299,6 +335,7 @@
     },
     "alphabeta-border-friend" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -307,6 +344,7 @@
     },
     "alphabeta-border-team" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -315,6 +353,7 @@
     },
     "alphabeta-border-yellow" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -323,6 +362,7 @@
     },
     "alphabeta-small" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -330,6 +370,7 @@
     },
     "pb-dark" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -337,6 +378,7 @@
     },
     "console-green" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -344,6 +386,7 @@
     },
     "console-red" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -351,6 +394,7 @@
     },
     "console-blue" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -358,6 +402,7 @@
     },
     "console-purple" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -365,6 +410,7 @@
     },
     "console-orange" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -372,6 +418,7 @@
     },
     "console" :{
         "default_type" : "fontDef",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -379,6 +426,7 @@
     },
     "-input" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -386,6 +434,7 @@
     },
     "rbattle" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -393,12 +442,14 @@
     },
     "editfieldautocompletionwindow" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
         "son:listbox" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -407,6 +458,7 @@
     },
     "editfield-errorinfowindow" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : "editfieldautocompletionwindow",
         "new" : true,
         "delete" : false,
@@ -415,6 +467,7 @@
         "minHeight" : {"old_value" : null, "new_value" : "35", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
         "son:label" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : true,
             "delete" : false,
@@ -426,6 +479,7 @@
     },
     "combobox" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -433,6 +487,7 @@
     },
     "valueadjuster" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -440,21 +495,25 @@
     },
     "tabbedframe" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:nameplate" : {
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:label" : {
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -465,12 +524,14 @@
     },
     "listbox" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
         "son:display" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -479,6 +540,7 @@
     },
     "fpscounter" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -486,11 +548,13 @@
     },
     "confirm-panel" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:textarea" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -502,6 +566,7 @@
     },
     "colorselector" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : "confirm-panel",
         "new" : true,
         "delete" : false,
@@ -509,6 +574,7 @@
         "mouseCursor." : {"old_value" : null, "new_value" : "eforen.cursor.arrow.*", "change_weigth" : 5, "type" : "add", "param_type" : "cursor"},
         "son:label" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : true,
             "delete" : false,
@@ -516,6 +582,7 @@
         },
         "son:colorarea1d" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : "label",
             "new" : true,
             "delete" : false,
@@ -528,6 +595,7 @@
         },
         "son:colorarea2d" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : "colorarea1d",
             "new" : true,
             "delete" : false,
@@ -540,6 +608,7 @@
         },
         "son:valueadjuster" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : "colorarea2d",
             "new" : true,
             "delete" : false,
@@ -550,6 +619,7 @@
         },
         "son:hexColorEditField" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : "valueadjuster",
             "new" : true,
             "delete" : false,
@@ -558,6 +628,7 @@
         },
         "son:previewLabel" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : "hexColorEditField",
             "new" : true,
             "delete" : false,
@@ -566,6 +637,7 @@
         },
         "son:preview" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : "previewLabel",
             "new" : true,
             "delete" : false,
@@ -575,6 +647,7 @@
             "minHeight" : {"old_value" : null, "new_value" : "64", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
             "son:colorarea" : {
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : true,
                 "delete" : false,
@@ -583,6 +656,7 @@
             },
             "son:previewLabel" : {
                 "default_type" : "theme",
+                "android" : false,
                 "before" : "colorarea",
                 "new" : true,
                 "delete" : false,
@@ -592,11 +666,13 @@
     },
     "gtl-buy-panel" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:textarea" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -608,21 +684,25 @@
     },
     "release-widget" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:confirm-panel" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:scrollpane" : {
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:label" : {
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -630,6 +710,7 @@
                 },
                 "son:label-markup" : {
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -640,16 +721,19 @@
     },
     "disconnection-widget" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:confirm-panel" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:label-default" : {
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -657,6 +741,7 @@
             },
             "son:textarea" : {
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -669,21 +754,25 @@
     },
     "trade-confirm-widget" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:scrollpane" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:trade-frame-confirm-dialog" : {
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:label-markup" : {
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -694,11 +783,13 @@
     },
     "notification" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" : {
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : true
@@ -706,6 +797,7 @@
     },
     "tooltip-button" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -713,6 +805,7 @@
     },
     "tooltip-button2" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -720,6 +813,7 @@
     },
     "battle-move-button" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -727,12 +821,14 @@
     },
     "battle-button-return" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
         "son:label" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -740,6 +836,7 @@
         },
         "son:label-button" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -748,12 +845,14 @@
     },
     "battle-button-register" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "font" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
         "son:label" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -761,6 +860,7 @@
         },
         "son:label-button" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -769,12 +869,14 @@
     },
     "battle-button" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "font2" : {"old_value" : "alphabeta-border", "new_value" : "main-border", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
         "son:label" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -783,6 +885,7 @@
     },
     "battle-button-ui" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -790,6 +893,7 @@
         "font2" : {"old_value" : "alphabeta-small", "new_value" : "main-small", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
         "son:label" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -798,16 +902,19 @@
     },
     "battle-panel" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:label-black" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -816,16 +923,19 @@
         },
         "son:scrollpane" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:dialoglayout" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:button" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -835,6 +945,7 @@
         },
         "son:label" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -842,6 +953,7 @@
         },
         "son:button" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -850,21 +962,25 @@
     },
     "battle-item-usage-panel" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:scrollpane" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:label-black" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -874,16 +990,19 @@
         },
         "son:scrollpane" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:dialoglayout" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:button" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -894,6 +1013,7 @@
     },
     "monster-preview-panel-label-red" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -901,6 +1021,7 @@
     },
     "monster-preview-panel-label-grey" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -908,6 +1029,7 @@
     },
     "monster-preview-panel-label-yellow" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -915,6 +1037,7 @@
     },
     "monster-preview-panel-label-teal" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -922,11 +1045,13 @@
     },
     "contestgui" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:contestresulttext" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -934,6 +1059,7 @@
         },
         "son:redlabel" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -941,11 +1067,13 @@
         },
         "son:contestresultmeter" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:label" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -955,6 +1083,7 @@
     },
     "contest-button" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -962,6 +1091,7 @@
     },
     "contest-button-return" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -969,16 +1099,19 @@
     },
     "contest-panel" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:label-black" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -987,16 +1120,19 @@
         },
         "son:scrollpane" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:dialoglayout" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:button" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -1006,6 +1142,7 @@
         },
         "son:label-black" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1013,6 +1150,7 @@
         },
         "son:button" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1021,11 +1159,13 @@
     },
     "hotkeybar-frame" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:title" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1034,6 +1174,7 @@
     },
     "chat-monster-info" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1041,6 +1182,7 @@
     },
     "chat-monster-info-shiny" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1048,11 +1190,13 @@
     },
     "chatresizableframe" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:title" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1061,21 +1205,25 @@
     },
     "chatframe" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:content" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:scrollpane" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:textarea" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -1109,11 +1257,13 @@
             },
             "son:top" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:togglebutton-normal" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -1121,6 +1271,7 @@
                 },
                 "son:togglebutton-settings" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -1128,6 +1279,7 @@
                 },
                 "son:togglebutton-notification" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -1136,11 +1288,13 @@
             },
             "son:bottom" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:button" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -1148,11 +1302,13 @@
                 },
                 "son:editfield" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
                     "son:renderer" :{
                         "default_type" : "theme",
+                        "android" : false,
                         "before" : null,
                         "new" : false,
                         "delete" : false,
@@ -1164,6 +1320,7 @@
     },
     "chat-playername" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1171,21 +1328,25 @@
     },
     "pm-box-frame" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:text-scrollpane" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:editfield" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -1193,6 +1354,7 @@
                 },
                 "son:textarea" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -1205,6 +1367,7 @@
     },
     "monsterdex-button" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1212,16 +1375,19 @@
     },
     "monster-frame" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:nameplate" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:label-level" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1229,6 +1395,7 @@
             },
             "son:label-monster-name" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1237,11 +1404,13 @@
         },
         "son:itemplate" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:label" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1249,6 +1418,7 @@
             },
             "son:label2" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1258,11 +1428,13 @@
     },
     "label-monster-area" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:button" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1270,6 +1442,7 @@
         },
         "son:label-monster-title" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1277,6 +1450,7 @@
         },
         "son:label-monster-title-wide" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1284,6 +1458,7 @@
         },
         "son:label-monster-title-full" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1291,6 +1466,7 @@
         },
         "son:label-monster-value" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1298,6 +1474,7 @@
         },
         "son:label-hidden-ability" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1305,6 +1482,7 @@
         },
         "son:label-monster-value-stat-complete" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1312,6 +1490,7 @@
         },
         "son:label-monster-value-stat-bad" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1319,6 +1498,7 @@
         },
         "son:label-monster-value-center" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1326,6 +1506,7 @@
         },
         "son:label-monster-value-name" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1333,6 +1514,7 @@
         },
         "son:label" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1341,6 +1523,7 @@
     },
     "translate-link" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1348,6 +1531,7 @@
     },
     "label-settings-title" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1355,6 +1539,7 @@
     },
     "editfield-settings-value-small" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : "label-settings-title-small",
         "new" : true,
         "delete" : false,
@@ -1365,6 +1550,7 @@
     },
     "label-settings-value" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1372,6 +1558,7 @@
     },
     "label-settings-vai" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1380,12 +1567,14 @@
     },
     "settings-colorselector" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : "label-settings-vai",
         "new" : true,
         "delete" : false,
         "ref" : {"old_value" : null, "new_value" : "colorselector", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
         "son:colorarea2d" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : true,
             "delete" : false,
@@ -1395,6 +1584,7 @@
     },
     "settings-collapsiblemenu" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : "label-settings-value-small",
         "new" : true,
         "delete" : false,
@@ -1402,31 +1592,37 @@
     },
     "mods-panel" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:scrollpane" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:settings-label-area" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
                     "son:dialoglayout" :{
                         "default_type" : "theme",
+                        "android" : false,
                         "before" : null,
                         "new" : false,
                         "delete" : false,
                         "son:label-settings-value-modbuttons" :{
                             "default_type" : "theme",
+                            "android" : false,
                             "before" : null,
                             "new" : false,
                             "delete" : false,
@@ -1439,31 +1635,37 @@
     },
     "rom-panel" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:scrollpane" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:settings-label-area" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
                     "son:dialoglayout" :{
                         "default_type" : "theme",
+                        "android" : false,
                         "before" : null,
                         "new" : false,
                         "delete" : false,
                         "son:label-settings-value-modbuttons" :{
                             "default_type" : "theme",
+                            "android" : false,
                             "before" : null,
                             "new" : false,
                             "delete" : false,
@@ -1476,21 +1678,25 @@
     },
     "mm-rental-window" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:pc-slot" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:label-dark" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -1501,6 +1707,7 @@
     },
     "label-hidden-ability" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1508,11 +1715,13 @@
     },
     "mail-inner" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1520,6 +1729,7 @@
             "contentRowBackground" : {"old_value" : null, "new_value" : "ui-inputbox.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
             "son:button" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : true,
                 "delete" : false,
@@ -1529,6 +1739,7 @@
             },
             "son:button-row" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : "button",
                 "new" : true,
                 "delete" : false,
@@ -1539,6 +1750,7 @@
             },
             "son:label-value" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1547,36 +1759,42 @@
             },
             "son:label-value-medium" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : true
             },
             "son:label-value-small" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : true
             },
             "son:label-value-small2" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : true
             },
             "son:label-value-smallest" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : true
             },
             "son:label-value-icon" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : true
             },
             "son:label-title" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1590,6 +1808,7 @@
             },
             "son:label-field" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : "label-title",
                 "new" : true,
                 "delete" : false,
@@ -1602,24 +1821,28 @@
             },
             "son:label-title-medium" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : true
             },
             "son:label-title-small" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : true
             },
             "son:label-title-small2" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : true
             },
             "son:label-title-smallest" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : true
@@ -1628,11 +1851,13 @@
     },
     "read-mail" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:label-value" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1640,12 +1865,14 @@
         },
         "son:label-value-small" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : true
         },
         "son:label-title" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1654,6 +1881,7 @@
         },
         "son:label-title-small" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : true
@@ -1661,26 +1889,31 @@
     },
     "trade-frame" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:dialoglayout" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:pokeframe" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
                     "son:item-slot" :{
                         "default_type" : "theme",
+                        "android" : false,
                         "before" : null,
                         "new" : false,
                         "delete" : false,
@@ -1692,6 +1925,7 @@
     },
     "gameshop-item" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1699,16 +1933,19 @@
     },
     "link-status" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:link-slot" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:label" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1718,16 +1955,19 @@
     },
     "town-map" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:townmap-cursor" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1737,16 +1977,19 @@
     },
     "high-score-table" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:box-layout-row" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:label-self" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1756,11 +1999,13 @@
     },
     "broker-table" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:label-muted" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1768,6 +2013,7 @@
         },
         "son:cell-markup" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1775,6 +2021,7 @@
         },
         "son:cell-warn" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1782,6 +2029,7 @@
         },
         "son:cell-danger" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1789,6 +2037,7 @@
         },
         "son:cell-positive" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1797,16 +2046,19 @@
     },
     "pc-frame" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:preview-frame" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:label-markup" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1814,6 +2066,7 @@
             },
             "son:label-hidden-ability" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1822,21 +2075,25 @@
         },
         "son:container" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:scrollpane" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:dialoglayout" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
                     "son:label-battle-box" :{
                         "default_type" : "theme",
+                        "android" : false,
                         "before" : null,
                         "new" : false,
                         "delete" : false,
@@ -1844,11 +2101,13 @@
                     },
                     "son:pc-slot" :{
                         "default_type" : "theme",
+                        "android" : false,
                         "before" : null,
                         "new" : false,
                         "delete" : false,
                         "son:label-dark" :{
                             "default_type" : "theme",
+                            "android" : false,
                             "before" : null,
                             "new" : false,
                             "delete" : false,
@@ -1859,16 +2118,19 @@
             },
             "son:dialoglayout" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:pc-slot" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
                     "son:label-dark" :{
                         "default_type" : "theme",
+                        "android" : false,
                         "before" : null,
                         "new" : false,
                         "delete" : false,
@@ -1880,6 +2142,7 @@
     },
     "selectall-button" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1887,6 +2150,7 @@
     },
     "unselectall-button" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1894,6 +2158,7 @@
     },
     "edit-button" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -1901,11 +2166,13 @@
     },
     "gmpanel" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:button" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1913,6 +2180,7 @@
         },
         "son:button-search" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1920,6 +2188,7 @@
         },
         "son:button-tools" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1927,6 +2196,7 @@
         },
         "son:button-player" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1934,6 +2204,7 @@
         },
         "son:button-sound" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1941,6 +2212,7 @@
         },
         "son:button-ping" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1948,6 +2220,7 @@
         },
         "son:button-support" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1955,6 +2228,7 @@
         },
         "son:button-gc" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -1962,11 +2236,13 @@
         },
         "son:admin-small-frame" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:button" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1974,6 +2250,7 @@
             },
             "son:label-title" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -1981,11 +2258,13 @@
             },
             "son:dialoglayout" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:button" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -1993,6 +2272,7 @@
                 },
                 "son:label-title" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -2003,11 +2283,13 @@
     },
     "tp-direction-widget" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:button" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -2016,11 +2298,13 @@
     },
     "logingui" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:label" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -2028,11 +2312,13 @@
         },
         "son:login-panel" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:label" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -2040,11 +2326,13 @@
             },
             "son:tos-content" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:textarea" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -2060,32 +2348,38 @@
     },
     "characterselectgui" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:login-panel" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:container" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:character-select-button" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
                     "font" : {"old_value" : "alphabeta", "new_value" : "main", "change_weigth" : 0, "type" : "edit", "param_type" : "font"},
                     "son:dialoglayout" :{
                         "default_type" : "theme",
+                        "android" : false,
                         "before" : null,
                         "new" : false,
                         "delete" : false,
                         "son:spritelabel" :{
                             "default_type" : "theme",
+                            "android" : false,
                             "before" : null,
                             "new" : false,
                             "delete" : false,
@@ -2098,11 +2392,13 @@
     },
     "event-tracker" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:label" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -2111,16 +2407,19 @@
     },
     "encounter-counter" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:content" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:label" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -2130,16 +2429,19 @@
     },
     "encounter-counter-shiny" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:content" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:button" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -2147,6 +2449,7 @@
             },
             "son:cell-markup" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -2156,11 +2459,13 @@
     },
     "hudgui" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:label" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -2169,6 +2474,7 @@
     },
     "battle-party-select" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : "clause-failure",
         "new" : true,
         "delete" : false,
@@ -2176,6 +2482,7 @@
         "allowWildcard" : {"old_value" : null, "new_value" : "true", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
         "son:label-monster-slot" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : true,
             "delete" : false,
@@ -2185,6 +2492,7 @@
         },
         "son:label-monster-violation" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : true,
             "delete" : false,
@@ -2195,11 +2503,13 @@
     },
     "nameplategui" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:nameplate-staff" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -2207,6 +2517,7 @@
         },
         "son:nameplate" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -2214,6 +2525,7 @@
         },
         "son:nameplate-friend" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -2221,6 +2533,7 @@
         },
         "son:nameplate-team" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -2229,6 +2542,7 @@
     },
     "msgbox-move-selection-button" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -2236,6 +2550,7 @@
     },
     "msgbox-return" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -2243,6 +2558,7 @@
     },
     "spritetogglebutton" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -2250,6 +2566,7 @@
     },
     "spritetogglebutton-outline" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -2257,6 +2574,7 @@
     },
     "label-title" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -2264,16 +2582,19 @@
     },
     "trainercard" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:label" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -2281,6 +2602,7 @@
             },
             "son:spritelabel" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -2288,6 +2610,7 @@
             },
             "son:label-centered" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -2295,6 +2618,7 @@
             },
             "son:button" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
@@ -2304,26 +2628,31 @@
     },
     "movetutor" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:scrollpane" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:dialoglayout" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
                     "son:battlebutton" :{
                         "default_type" : "theme",
+                        "android" : false,
                         "before" : null,
                         "new" : false,
                         "delete" : false,
@@ -2335,21 +2664,25 @@
     },
     "petitionframe" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:dialoglayout" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
             "son:text-scrollpane" :{
                 "default_type" : "theme",
+                "android" : false,
                 "before" : null,
                 "new" : false,
                 "delete" : false,
                 "son:textarea" :{
                     "default_type" : "theme",
+                    "android" : false,
                     "before" : null,
                     "new" : false,
                     "delete" : false,
@@ -2362,11 +2695,13 @@
     },
     "changelog-frame" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
         "son:button" :{
             "default_type" : "theme",
+            "android" : false,
             "before" : null,
             "new" : false,
             "delete" : false,
@@ -2375,6 +2710,7 @@
     },
     "effects-slot" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,
@@ -2382,6 +2718,7 @@
     },
     "server-status-success" :{
         "default_type" : "theme",
+        "android" : false,
         "before" : null,
         "new" : false,
         "delete" : false,

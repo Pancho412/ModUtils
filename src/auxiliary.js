@@ -10,20 +10,22 @@ function generatePDF() {
         let type = log.match(/\[(.*?)\]/)[1];
         switch(type){
             case "info":
-                doc.setTextColor(0, 0, 255); // azul
+                doc.setTextColor(0, 0, 255); // blue
                 break;
             case "warning":
-                doc.setTextColor(255, 165, 0); // naranja
+                doc.setTextColor(255, 165, 0); // orange
                 break;
             case "error":
-                doc.setTextColor(255, 0, 0); // rojo
+                doc.setTextColor(255, 0, 0); // red
+                break;
+            case "success":
+                doc.setTextColor(0, 200, 0); // green
                 break;
             default:
                 doc.setTextColor(0, 0, 0);
         }
         doc.text(log, 10, y);
         y += 10;
-        // salto de página si es necesario
         if (y > 280){
             doc.addPage();
             y = 10;
