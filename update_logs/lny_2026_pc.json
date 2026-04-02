@@ -474,7 +474,7 @@
             "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
             "border" : {"old_value" : null, "new_value" : "10", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
             "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"},
-            "font" : {"old_value" : null, "new_value" : "main", "change_weigth" : 5, "type" : "add", "param_type" : "font"}
+            "font" : {"old_value" : null, "new_value" : "main", "change_weigth" : 0, "type" : "add", "param_type" : "font"}
         }
     },
     "combobox" :{

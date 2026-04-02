@@ -259,16 +259,28 @@ function addLog(message, type = "info") {
 
 function updateItem(fileDoc,themesRoot,key,config,includelength,fileModified,totalChanges){
   const defaultType = config.default_type
+  let pchecked = false
+  let checkedKeyitem = checked.find(checkedElement => checkedElement.split("~")[0] == key && checkedElement.split("~")[1] == defaultType && checkedElement.split("~")[2] == "false")
+
 
   let insertAfterElement = false
 
   // the "element"
   const element = themesRoot.querySelector(`:scope > ${defaultType}[name="${key}"]`)
 
+  if(checkedKeyitem || config.android){
+    pchecked = true
+  }
+  else{
+    if(element)
+      checked.push(`${key}~${defaultType}~${pchecked}`)
+    return {includelength, fileModified, totalChanges}
+  }
+
   // create new element
   if(config.new == true){
     let elementbefore = null
-    if(config.before){
+    if(config.before != null){
       elementbefore = themesRoot.querySelector(`${defaultType}[name="${config.before}"]`)
       if(!elementbefore){
           return {includelength, fileModified, totalChanges}
@@ -290,14 +302,9 @@ function updateItem(fileDoc,themesRoot,key,config,includelength,fileModified,tot
     }
         
     addLog(`${key} created after: ${config.before}`, "success")
-    if(config.android){
-      checked.push(`${key}~${defaultType}~pc`)
-      checkedInThisFile.push(`${key}~${defaultType}~pc`)
-    }
-    else{
-      checked.push(`${key}~${defaultType}~mobile`)
-      checkedInThisFile.push(`${key}~${defaultType}~mobile`)
-    }
+    checkedInThisFile.push(`${key}~${defaultType}`)
+    
+    checked.push(`${key}~${defaultType}~${pchecked}`)
     
     fileModified = true
     totalChanges++
@@ -307,7 +314,7 @@ function updateItem(fileDoc,themesRoot,key,config,includelength,fileModified,tot
   if(!element){
     if(includelength == 0){
       addLog(`${key} not found`,'warning')
-      issueItems.push(`${key}~${defaultType} Not Found`)
+      notFoundItems.push(`${key}~${defaultType} Not Found`)
     }
     return {includelength, fileModified, totalChanges}
   }
@@ -315,34 +322,28 @@ function updateItem(fileDoc,themesRoot,key,config,includelength,fileModified,tot
 
   if(config.delete == true){
     element.remove()
-    if(config.android){
-      checked.push(`${key}~${defaultType}~pc`)
-      checkedInThisFile.push(`${key}~${defaultType}~pc`)
-    }
-    else{
-      checked.push(`${key}~${defaultType}~mobile`)
-      checkedInThisFile.push(`${key}~${defaultType}~mobile`)
-    }
+    checkedInThisFile.push(`${key}~${defaultType}`)
+    
+    checked.push(`${key}~${defaultType}~${pchecked}`)
     fileModified = true
     totalChanges++
     return {includelength, fileModified, totalChanges}
   }
     
-  const changesMade = updateMatched(element, config)
+  const changesMade = updateMatched(element, config, key)
   if (changesMade) {
-    if(config.android){
-      checked.push(`${key}~${defaultType}~mobile`)
-      checkedInThisFile.push(`${key}~${defaultType}~mobile`)
-    }
-    else{
-      checked.push(`${key}~${defaultType}~pc`)
-      checkedInThisFile.push(`${key}~${defaultType}~pc`)
-    }
+    const indice = notFoundItems.findIndex(notFoundItemElement => notFoundItemElement == `${key}~${defaultType} Failed To update`)
+    if(indice !== -1)
+      notFoundItems.splice(indice, 1)
+    checkedInThisFile.push(`${key}~${defaultType}`)
+    
+    checked.push(`${key}~${defaultType}~${pchecked}`)
     fileModified = true
     totalChanges++
   }
   else{
-    issueItems.push(`${key}~${defaultType} Failed To update`)
+    if(!notFoundItems.find(notFoundItemElement => notFoundItemElement == `${key}~${defaultType} Failed To update`))
+      notFoundItems.push(`${key}~${defaultType} Failed To update`)
   }
   return {includelength, fileModified, totalChanges}
 }
@@ -486,32 +487,19 @@ async function processXmlRecursive(filePath, parser, zip_file, updateMap, modifi
   // for each change in the json
   for (const key in updateMap) {
     const config = updateMap[key]
-
-    // already checked
     
     if (key === "theme.xml"){
       continue
     }
 
-    let updatetype = "pc"
-    if (config.android){
-      updatetype = "mobile"
-    }
-    else{
-      updatetype = "pc"
-    }
-
-    const checkedKey = checked.find(checkedElement => checkedElement.split("~")[0] == key && checkedElement.split("~")[1] == config.default_type && checkedElement.split("~")[2] == updatetype)
+    const checkedKey = checked.find(checkedElement => checkedElement.split("~")[0] == key && checkedElement.split("~")[1] == config.default_type && checkedElement.split("~")[2] == "true")
     const checkedKeyInThisFile = checkedInThisFile.find(checkedElementInThisFile => checkedElementInThisFile.split("~")[0] == key && checkedElementInThisFile.split("~")[1] == config.default_type)
     if(checkedKeyInThisFile)
       continue
     if (checkedKey){
-      if(checkedKey.split("~")[2] == "pc" && !config.android)
-        continue
-      if(checkedKey.split("~")[2] == "mobile" && config.android)
         continue
     }
-
+    
     result = updateItem(fileDoc,themesRoot,key,config,includelength,fileModified,totalChanges)
     includelength = result.includelength
     fileModified = result.fileModified
@@ -522,8 +510,9 @@ async function processXmlRecursive(filePath, parser, zip_file, updateMap, modifi
   const includeNodes = fileDoc.querySelectorAll("include")
 
   for (const inc of includeNodes) {
+    
     const relativePath = inc.getAttribute("filename")
-
+    addLog(`include en archivo ${relativePath}`,'info')
     const nextPath = resolvePath(filePath, relativePath)
 
     includelength += 1
@@ -585,10 +574,15 @@ function createNewElement(doc, name, config, indentLevel = 1) {
     
     // Handle param elements
     if (attrConfig.type === "add"){
-      let newParam = createNewParam(doc, attributeKey, attrConfig, paramType)
-      // Add newline and indent before param
-      newElement.appendChild(doc.createTextNode("\n" + childIndent))
-      newElement.appendChild(newParam)
+      if(attrConfig.change_weigth == 0){
+        addLog(`${attrConfig.new_value} irrelevant to create`,"warning")
+      }
+      else{
+        let newParam = createNewParam(doc, attributeKey, attrConfig, paramType)
+        // Add newline and indent before param
+        newElement.appendChild(doc.createTextNode("\n" + childIndent))
+        newElement.appendChild(newParam)
+      }
     }
   }
   
@@ -599,7 +593,7 @@ function createNewElement(doc, name, config, indentLevel = 1) {
 }
 
 // Returns true if any changes were made
-function updateMatched(matchedElement, config){
+function updateMatched(matchedElement, config, key){
   let changesMade = false
   
   for (const attributeKey in config) {
@@ -647,7 +641,7 @@ function updateMatched(matchedElement, config){
 
       if (sonElements.length === 0) {
         addLog(`son ${childName} not found`, "error")
-        issueItems.push(`son ${childName} Not Found`) // Add parent
+        issueItems.push(`${key}: son ${childName} Not Found`) // Add parent in future
         continue
       }
 
@@ -667,7 +661,7 @@ function updateMatched(matchedElement, config){
 
         // recursive function yeiiiiiiii i know that i gonna use this someday
         addLog(`son ${childName} found (${index + 1})`, "success")
-        const sonChanges = updateMatched(sonElement, childConfig)
+        const sonChanges = updateMatched(sonElement, childConfig, key)
         if (sonChanges) changesMade = true
       })
 
@@ -683,14 +677,14 @@ function updateMatched(matchedElement, config){
         const paramElement = matchedElement.querySelector(`:scope > param[name="${mapName}"]`)
         if (!paramElement) {
           addLog(`- map ${mapName} not found`, "warning")
-          issueItems.push(`map ${mapName} Not Found`)
+          issueItems.push(`${key}: map ${mapName} Not Found`)
           continue
         }
 
         const mapElement = paramElement.querySelector("map")
         if (!mapElement) {
           addLog(`- <map> inside ${mapName} not found`, "warning")
-          issueItems.push(`<map> inside ${mapName} Not Found`)
+          issueItems.push(`${key}: <map> inside ${mapName} Not Found`)
           continue
         }
 
@@ -721,7 +715,7 @@ function updateMatched(matchedElement, config){
 
           if (!mapParam) {
             addLog(`- map param ${mapKey} not found`, "warning")
-            issueItems.push(`map param ${mapKey} Not Found`)
+            issueItems.push(`${key}: map param ${mapKey} Not Found`)
             continue
           }
 
@@ -737,25 +731,30 @@ function updateMatched(matchedElement, config){
 
             if (!innerElement) {
               addLog(`- ${mapItemConfig.param_type} not found in map param ${mapKey}`, "warning")
-              issueItems.push(`- ${mapItemConfig.param_type} not found in map param ${mapKey}`)
+              issueItems.push(`${key}: - ${mapItemConfig.param_type} not found in map param ${mapKey}`)
               continue
             }
 
             const currentValue = innerElement.textContent.trim()
 
-            if (currentValue === mapItemConfig.new_value) {
-              addLog(`- map param ${mapKey} already updated`, "success")
-            }
-            else if (currentValue === mapItemConfig.old_value) {
-              innerElement.textContent = mapItemConfig.new_value
-              addLog(`- map param ${mapKey} updated: ${mapItemConfig.old_value} -> ${mapItemConfig.new_value}`, "success")
-              changesMade = true
+            if (mapItemConfig.change_weigth == 0){
+                addLog(`map param ${mapKey} irrelevant to update`,"warning")
             }
             else {
-              addLog(`- map param ${mapKey} unexpected value (${currentValue})`, "warning")
-              innerElement.textContent = mapItemConfig.new_value
-              addLog(`- map param ${mapKey} updated: ${currentValue} -> ${mapItemConfig.new_value}`, "success")
-              changesMade = true
+              if (currentValue === mapItemConfig.new_value) {
+                addLog(`- map param ${mapKey} already updated`, "success")
+              }
+              else if (currentValue === mapItemConfig.old_value) {
+                innerElement.textContent = mapItemConfig.new_value
+                addLog(`- map param ${mapKey} updated: ${mapItemConfig.old_value} -> ${mapItemConfig.new_value}`, "success")
+                changesMade = true
+              }
+              else {
+                addLog(`- map param ${mapKey} unexpected value (${currentValue})`, "warning")
+                innerElement.textContent = mapItemConfig.new_value
+                addLog(`- map param ${mapKey} updated: ${currentValue} -> ${mapItemConfig.new_value}`, "success")
+                changesMade = true
+              }
             }
           }
         }
@@ -797,7 +796,7 @@ function updateMatched(matchedElement, config){
         const paramElement = matchedElement.querySelector(`:scope > param[name="${attributeKey}"]`)
         if (!paramElement) {
           addLog(`- param ${attributeKey} not found`, "warning")
-          issueItems.push(`- param ${attributeKey} not found`)
+          issueItems.push(`${key}: - param ${attributeKey} not found`)
           continue
         }
         
@@ -812,7 +811,7 @@ function updateMatched(matchedElement, config){
         }
         if (!innerElement) {
           addLog(`- ${paramType} not found in param ${attributeKey}`, "warning")
-          issueItems.push(`- ${paramType} not found in param ${attributeKey}`)
+          issueItems.push(`${key}: - ${paramType} not found in param ${attributeKey}`)
           continue
         }
         
@@ -820,6 +819,9 @@ function updateMatched(matchedElement, config){
         
         if (currentValue === attrConfig.new_value) {
           addLog(`- param ${attributeKey} already updated`, "success")
+        }
+        if (attrConfig.change_weigth == 0){
+          addLog(`param ${attributeKey} irrelevant to update`,"warning")
         }
         else if (currentValue === attrConfig.old_value) {
           // Replace old value with new value
@@ -837,7 +839,7 @@ function updateMatched(matchedElement, config){
       else{
         const paramElement = matchedElement.querySelector(`:scope > param[name="${attributeKey}"]`)
         addLog(`OBJ param ${paramElement ? paramElement.textContent : 'not found'}`, "warning")
-        issueItems.push(`OBJ param ${paramElement ? paramElement.textContent : 'not found'}`)
+        issueItems.push(`${key}: OBJ param ${paramElement ? paramElement.textContent : 'not found'}`)
       }
     }
     else {
@@ -845,7 +847,7 @@ function updateMatched(matchedElement, config){
 
       if (!currentValue) {
         addLog(`- atribute ${attributeKey} not found`, "warning")
-        issueItems.push(`- atribute ${attributeKey} not found`)
+        issueItems.push(`${key}: - atribute ${attributeKey} not found`)
         continue
       }
 
@@ -855,22 +857,32 @@ function updateMatched(matchedElement, config){
       else if (currentValue === attrConfig.old_value) {
         if (attrConfig.type === "edit") {
           // Replace old value with new value for base attributes
-          matchedElement.setAttribute(attributeKey, attrConfig.new_value)
-          addLog(`- ${attributeKey} updated: ${attrConfig.old_value} -> ${attrConfig.new_value}`, "success")
-          changesMade = true
+          if(attrConfig.change_weigth == 0){
+            addLog(`${attributeKey} irrelevant to update`,"warning")
+          }
+          else {
+            matchedElement.setAttribute(attributeKey, attrConfig.new_value)
+            addLog(`- ${attributeKey} updated: ${attrConfig.old_value} -> ${attrConfig.new_value}`, "success")
+            changesMade = true
+          }
         } else {
           addLog(`- ${attributeKey} outdated`, "warning")
         }
       }
       else {
         addLog(`- ${attributeKey} unexpected value (${currentValue})`, "warning")
-        if (attrConfig.type === "edit") {
-          // Replace old value with new value for base attributes
-          matchedElement.setAttribute(attributeKey, attrConfig.new_value)
-          addLog(`- ${attributeKey} updated: ${currentValue} -> ${attrConfig.new_value}`, "success")
-          changesMade = true
-        } else {
-          addLog(`- ${attributeKey} outdated`, "warning")
+        if(attrConfig.change_weigth == 0){
+          addLog(`${attributeKey} irrelevant to update`,"warning")
+        }
+        else {
+          if (attrConfig.type === "edit") {
+            // Replace old value with new value for base attributes
+            matchedElement.setAttribute(attributeKey, attrConfig.new_value)
+            addLog(`- ${attributeKey} updated: ${currentValue} -> ${attrConfig.new_value}`, "success")
+            changesMade = true
+          } else {
+            addLog(`- ${attributeKey} outdated`, "warning")
+          }
         }
       }
     }
@@ -899,13 +911,16 @@ async function processZip() {
       ismobile = theme.getAttribute("is_mobile") == "true"
 
       if (ismobile) {
-        updateMap = updateMapAndroid
-        addLog(`Using mobile update for theme: ${theme.getAttribute("name")}`, "info")
+        updateMap = Object.fromEntries(
+          Object.entries(updateMapAndroid).reverse()
+        )
+        addLog(`Using mobile update for theme:`, "info")
       }
       else{
         updateMap = updateMapPC
-        addLog(`Using PC update for theme: ${theme.getAttribute("name")}`, "info")
+        addLog(`Using PC update for theme:`, "info")
       }
+      addLog(`${theme.getAttribute("name")}`,'info')
 
       let themePath = theme.getAttribute("path") || ""
 
@@ -943,16 +958,20 @@ async function processZip() {
       const includeNode = themeDoc.querySelector('include[filename="init.xml"]')
       // testing :3
 
-      const includeNode2 = themeDoc.querySelectorAll('include')
+      let includeNode2 = Array.from(themeDoc.querySelectorAll('include'))
 
-      if (!includeNode2) {
-          addLog("not valid theme.xml", "error")
-          break 
+      if(ismobile){
+        includeNode2.reverse()
+      }
+      if (includeNode2.length === 0) {
+        addLog("no includes found", "warning")
       }
 
       if (updateMap["theme.xml"]) {
+        if((ismobile && updateMap["theme.xml"].android) || (!ismobile && !updateMap["theme.xml"].android)){
           await handleNewXmlFile(updateMap["theme.xml"],themeDoc,themePath,zip_file,modifiedFiles,themeXmlPath)
-          checked.push(`theme.xml~${updateMap["theme.xml"].default_type}`)
+        }
+        checked.push(`theme.xml~${updateMap["theme.xml"].default_type}`)
       }
 
       let includelength = includeNode2.length
@@ -1002,9 +1021,12 @@ async function processZip() {
       
       addLog(`Update complete! ${totalChanges} changes applied.`, "success")
       if(issueItems.length > 0){
-        addLog(`Total issues: ${issueItems.length}`, "warning")
+        addLog(`Total issues: ${issueItems.length + notFoundItems.length}`, "warning")
         for(const issues of issueItems){
           addLog(`- ${issues}`, "warning")
+        }
+        for(const notfounds of notFoundItems){
+          addLog(`- ${notfounds}`, "warning")
         }
       }
       else{

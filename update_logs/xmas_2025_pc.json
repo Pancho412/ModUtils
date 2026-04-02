@@ -1,0 +1,355 @@
+{
+    "theme.xml" :{
+        "default_type" : "file",
+        "android" : false,
+        "before" : "ui/misc.xml",
+        "include" : "ui/advanced-search.xml",
+        "filename" : "advanced-search.xml",
+        "elements" : {
+            "advanced-search-dialog" :{
+                "default_type" : "theme",
+                "android" : false,
+                "before" : null,
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "dialoglayout", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "border" : {"old_value" : null, "new_value" : "5,0,0,10", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+                "son:mark-button" : {
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "button", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "background" : {"old_value" : null, "new_value" : "none", "change_weigth" : 5, "type" : "add", "param_type" : "image"}
+                },
+                "son:label-button-small2-centered" : {
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "button", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "background" : {"old_value" : null, "new_value" : "ui-button.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                    "border" : {"old_value" : null, "new_value" : "6", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+                    "minWidth" : {"old_value" : null, "new_value" : "96", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+                    "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+                },
+                "son:label-title-medium2" : {
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "background" : {"old_value" : null, "new_value" : "ui-header.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+                    "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"},
+                    "border" : {"old_value" : null, "new_value" : "6", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+                    "minWidth" : {"old_value" : null, "new_value" : "228", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+                },
+                "son:valueadjuster" : {
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "valueadjuster", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "minWidth" : {"old_value" : null, "new_value" : "184", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+                },
+                "son:combobox" : {
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "combobox", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "minWidth" : {"old_value" : null, "new_value" : "184", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+                },
+                "son:editfield" : {
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "editfield", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "minWidth" : {"old_value" : null, "new_value" : "184", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+                }
+            },
+            "advanced-search-frame" : {
+                "default_type" : "theme",
+                "android" : false,
+                "before" : null,
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "resizableframe", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "minHeight" : {"old_value" : null, "new_value" : "600", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+            }
+        }
+    },
+    "alphabeta-lightgray" :{
+        "default_type" : "fontDef",
+        "android" : false,
+        "before" : "alphabeta-gray",
+        "new" : true,
+        "delete" : false,
+        "ref" : {"old_value" : null, "new_value" : "alphabeta", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+        "color" : {"old_value" : null, "new_value" : "#CECECE", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"}
+    },
+    "res/battle-hud.png" :{
+        "default_type" : "images",
+        "android" : false,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:progress-white.progressImage" :{
+            "default_type" : "area",
+            "android" : false,
+            "before" : null,
+            "new" : true,
+            "delete" : false,
+            "xywh" : {"old_value" : null, "new_value" : "27,21,1,2", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "tint" : {"old_value" : null, "new_value" : "#FFFFFF", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "inset" : {"old_value" : null, "new_value" : "5,2", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"}
+        }
+    },
+    "trade-confirm-widget" :{
+        "default_type" : "theme",
+        "android" : false,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "minWidth" : {"old_value" : "500", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "int"},
+        "minHeight" : {"old_value" : "500", "new_value" : "600", "change_weigth" : 3, "type" : "edit", "param_type" : "int"},
+        "border" : {"old_value" : "5", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "border"},
+        "defaultGap" : {"old_value" : "5,5", "new_value" : null, "change_weigth" : 0, "type" : "delete", "param_type" : "dimension"},
+        "smallGap" : {"old_value" : "8,8", "new_value" : null, "change_weigth" : 0, "type" : "delete", "param_type" : "dimension"},
+        "mediumGap" : {"old_value" : "10,10", "new_value" : null, "change_weigth" : 0, "type" : "delete", "param_type" : "dimension"},
+        "largeGap" : {"old_value" : "15,15", "new_value" : null, "change_weigth" : 0, "type" : "delete", "param_type" : "dimension"},
+        "namedGaps" : {"old_value" : "<mapp/>", "new_value" : null, "change_weigth" : 0, "type" : "delete", "param_type" : "dimension"},
+        "son:scrollpane" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : null,
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "scrollpane", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "minWidth" : {"old_value" : null, "new_value" : "500", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+            "son:trade-frame-confirm-dialog" :{
+                "default_type" : "theme",
+                "android" : false,
+                "before" : null,
+                "new" : true,
+                "delete" : false,
+                "ref" : {"old_value" : null, "new_value" : "confirm-panel-dialog", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                "son:label" :{
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "font" : {"old_value" : null, "new_value" : "pb-dark", "change_weigth" : 5, "type" : "add", "param_type" : "font"},
+                    "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+                },
+                "son:label-markup" :{
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "font" : {"old_value" : null, "new_value" : "alphabeta-markup", "change_weigth" : 5, "type" : "add", "param_type" : "font"}
+                },
+                "son:button" :{
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : true,
+                    "delete" : false,
+                    "ref" : {"old_value" : null, "new_value" : "button", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+                    "minWidth" : {"old_value" : null, "new_value" : "102", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+                    "minHeight" : {"old_value" : null, "new_value" : "30", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+                }
+            }
+        }
+    },
+    "confirm-panel-dialog" :{
+        "default_type" : "theme",
+        "android" : false,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "minWidth" : {"old_value" : null, "new_value" : "250", "change_weigth" : 3, "type" : "add", "param_type" : "int"}
+    },
+    "trade-frame" :{
+        "default_type" : "theme",
+        "android" : false,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "border" : {"old_value" : null, "new_value" : "45,5,5,5", "change_weigth" : 3, "type" : "add", "param_type" : "border"},
+        "son:dialoglayout" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : null,
+            "new" : false,
+            "delete" : false,
+            "border" : {"old_value" : "45,5,5,5", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "border"},
+            "son:dialoglayout" :{
+                "default_type" : "theme",
+                "android" : false,
+                "before" : null,
+                "new" : false,
+                "delete" : false,
+                "son:label-horizontal-value" :{
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "maxWidth" : {"old_value" : "100", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "int"}
+                },
+                "son:valueadjuster-bg" :{
+                    "default_type" : "theme",
+                    "android" : false,
+                    "before" : null,
+                    "new" : false,
+                    "delete" : false,
+                    "maxWidth" : {"old_value" : "100", "new_value" : null, "change_weigth" : 3, "type" : "delete", "param_type" : "int"}
+                }
+            }
+        }
+    },
+    "broker-table" :{
+        "default_type" : "theme",
+        "android" : false,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "son:box-double" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : "header-column-sort-asc",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "font2" : {"old_value" : null, "new_value" : "pb-dark", "change_weigth" : 5, "type" : "add", "param_type" : "font"},
+            "font" : {"old_value" : null, "new_value" : "pb-dark", "change_weigth" : 5, "type" : "add", "param_type" : "font"},
+            "background" : {"old_value" : null, "new_value" : "ui-header.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+            "textAlignment" : {"old_value" : null, "new_value" : "TOPLEFT", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"},
+            "textAlignment2" : {"old_value" : null, "new_value" : "LEFT", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"},
+            "border" : {"old_value" : null, "new_value" : "10", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+            "minWidth" : {"old_value" : null, "new_value" : "50", "change_weigth" : 5, "type" : "add", "param_type" : "int"}
+        },
+        "son:box-double-warn" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : "box-double",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "box-double", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "font2" : {"old_value" : null, "new_value" : "pb-dark-yellow", "change_weigth" : 5, "type" : "add", "param_type" : "font"}
+        },
+        "son:box-double-danger" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : "box-double-warn",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "box-double", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "font2" : {"old_value" : null, "new_value" : "pb-dark-red", "change_weigth" : 5, "type" : "add", "param_type" : "font"}
+        },
+        "son:box-double-positive" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : "box-double-danger",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "box-double", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "font2" : {"old_value" : null, "new_value" : "pb-dark-green", "change_weigth" : 5, "type" : "add", "param_type" : "font"}
+        },
+        "son:market-section-header" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : "box-double-positive",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "font" : {"old_value" : null, "new_value" : "noto-bold-large-white", "change_weigth" : 5, "type" : "add", "param_type" : "font"}
+        },
+        "son:market-stack-progressbar" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : "market-section-header",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "-defaults", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "fadeDurationShow" : {"old_value" : null, "new_value" : "200", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+            "fadeDurationHide" : {"old_value" : null, "new_value" : "200", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+            "-init-" : {"old_value" : null, "new_value" : "progress-white.*", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+            "border" : {"old_value" : null, "new_value" : "2,4", "change_weigth" : 5, "type" : "add", "param_type" : "border"},
+            "minWidth" : {"old_value" : null, "new_value" : "200", "change_weigth" : 5, "type" : "add", "param_type" : "int"},
+            "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+        },
+        "son:market-stack-button" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : "market-stack-progressbar",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "background" : {"old_value" : null, "new_value" : "ui-button.background", "change_weigth" : 5, "type" : "add", "param_type" : "image"},
+            "textAlignment" : {"old_value" : null, "new_value" : "CENTER", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"}
+        },
+        "son:market-stack-right" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : "market-stack-button",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "textAlignment" : {"old_value" : null, "new_value" : "RIGHT", "change_weigth" : 5, "type" : "add", "param_type" : "enum:alignment"},
+            "border" : {"old_value" : null, "new_value" : "5", "change_weigth" : 5, "type" : "add", "param_type" : "border"}
+        },
+        "son:label-muted" :{
+            "default_type" : "theme",
+            "android" : false,
+            "before" : "market-stack-right",
+            "new" : true,
+            "delete" : false,
+            "ref" : {"old_value" : null, "new_value" : "label", "change_weigth" : 5, "type" : "add", "param_type" : "-base-"},
+            "font" : {"old_value" : null, "new_value" : "alphabeta-lightgray", "change_weigth" : 5, "type" : "add", "param_type" : "font"}
+        }
+    },
+    "cell-warn" :{
+        "default_type" : "theme",
+        "android" : false,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "pb-dark-yellow", "new_value" : "pb-dark", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "cell-danger" :{
+        "default_type" : "theme",
+        "android" : false,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "pb-dark-red", "new_value" : "pb-dark", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "cell-positive" :{
+        "default_type" : "theme",
+        "android" : false,
+        "before" : null,
+        "new" : false,
+        "delete" : false,
+        "font" : {"old_value" : "pb-dark-green", "new_value" : "pb-dark", "change_weigth" : 0, "type" : "edit", "param_type" : "font"}
+    },
+    "advanced-search-dialog" :{
+        "default_type" : "theme",
+        "android" : false,
+        "before" : null,
+        "new" : false,
+        "delete" : true
+    }
+}

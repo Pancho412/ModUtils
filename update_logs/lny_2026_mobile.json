@@ -128,7 +128,7 @@
     },
     "med-noshadow-12-white" :{
         "default_type" : "fontDef",
-        "android" : false,
+        "android" : true,
         "before" : "level",
         "new" : true,
         "delete" : false,
@@ -165,7 +165,7 @@
         "before" : null,
         "new" : false,
         "delete" : false,
-        "popupDirection" : {"old_value" : null, "new_value" : "FIT", "change_weigth" : 3, "type" : "edit", "param_type" : "enum:popupdirection"}
+        "popupDirection" : {"old_value" : null, "new_value" : "FIT", "change_weigth" : 3, "type" : "add", "param_type" : "enum:popupdirection"}
     },
     "notification" :{
         "default_type" : "theme",
